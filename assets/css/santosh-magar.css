@@ -1,0 +1,233 @@
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+nav{ 
+    position: fixed;
+    background-color: white;
+    height: 100px;
+    width: 100%;
+}
+nav > div {display: flex; padding: 10px 0;}
+
+li{list-style: none;}
+
+.right-header, .left-header, .banner-img, .banner-intro{width: 50%;}
+
+.left-header,.intro {
+    display: flex;
+    align-items: center;
+}
+
+.main-navigation-list {
+    margin-left: auto;
+}
+
+.left-header .main-navigation-list ul {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+	display: flex;
+	flex-wrap: wrap;}
+
+.left-header .main-navigation-list ul li{
+	text-transform: uppercase;
+	font-weight: bold;
+	padding-left: 10px;
+	padding-right: 10px;}
+
+a{text-decoration: none;}
+
+.intro-section{
+	padding-top: 100px;
+}
+
+.intro.container {
+	height: 100%;
+	background-color: white;
+    padding-bottom: 80px;
+    padding-top: 10px;
+}
+
+.banner-img .img{ border-radius: 50%; width: 100%; }
+
+.banner-intro {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 80px;
+}
+
+.banner-intro .heading-title{
+	line-height: 1.1;
+	color: Black;
+	font-size: 4.8823529411765rem;
+	font-weight: 800;
+	font-family: 'Playfair Display',serif;}
+
+.banner-intro h6 {
+	margin: 0;
+	text-transform: uppercase;
+	color: #758396;
+	font-size: 1rem;
+	font-family: 'Barlow Semi Condensed',sans-serif;
+	font-weight: bold;}
+
+.banner-w{padding: 0px 0px 65px 0px;} 
+
+.banner-w h3{
+	color: #758396;
+	line-height: 1.2;
+	font-size: 2.0588235294118rem;
+	font-weight: 800;
+	font-family: 'Playfair Display',serif;
+}
+
+.banner-intro .intro-contact a{
+	font-size: 20px;
+	line-height: 1em;
+	color: #000000;
+	padding-left: 7px;
+}
+
+.social-link .facebook-link a{
+	content:  url("../icon/facebook-box-fill.svg");
+	border:1px solid #3298DB ;
+}
+.social-link .facebook-link a:hover {
+	content:  url("../icon/facebook-box-fill-192FE6.svg");
+	border:1px solid #192FE6 ;
+}
+.social-link .github-link a{
+	content:  url("../icon/github-fill.svg");
+	border:1px solid #3298DB ;
+}
+.social-link .github-link a:hover {
+	content:  url("../icon/github-fill-192FE6.svg");
+	border:1px solid #192FE6 ;
+}
+.social-link .linked-link a{
+	content:  url("../icon/linkedin-box-fill.svg");
+	border:1px solid #3298DB ;
+}
+.social-link .linked-link a:hover {
+	content:  url("../icon/linkedin-box-fill-192FE6.svg");
+	border:1px solid #192FE6 ;
+}
+.social-link {display: flex;margin-left: -5px;}
+.social-link li {
+    background-color: white;
+    margin: 0 5px;
+    border-radius: 4px;
+    width: 50px;
+	height: 50px;
+}
+.social-link li a{
+	border-radius: 4px;
+	width: 100%;
+	height: 100%;}
+
+
+#about{background-color: #B4C1D0;}
+
+.about-head {
+	padding: 110px 0px 50px 0px;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+}
+
+div.about-head:nth-child(2) {
+    padding: 20px 0px;
+}
+
+.about-head h2{
+	font-size: 2.0588235294118rem;
+	font-weight: bold;
+	font-family: 'Playfair Display',serif;
+	line-height: 1.2;
+	color: #009BDF;
+	margin-bottom: 20px;
+}
+
+.about-head .about-content{
+	font-weight: 500;
+	font-family: 'Barlow Semi Condensed',sans-serif;
+	line-height: 1.6;
+	color: #000000;
+	margin-bottom: 20px;
+	align-self: center;
+}
+
+
+#contact{
+    background-color: #B9B8B8;
+    padding: 40px 25px;
+}
+
+#contact h4 {
+	margin-bottom: 20px;
+	font-family: 'Barlow Semi Condensed',sans-serif;
+	color: #000000;
+	font-size: 45px;
+	font-weight: 900;
+	text-align: center;
+}
+
+#contact .contact-element-title{
+	color: #000000;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+#contact .contact-element-content{
+	padding: 0px 0px 50px 0px;
+	margin: 0px;
+} 
+
+#contact .contact-element-content p{
+	padding: 0px;
+	margin: 0px;
+}
+
+.logo-contact {display: flex; padding: 40px 0px;}
+.logo-contact h4 { align-self: center;margin-right: auto; }
+.logo-contact img {margin-left: auto;}
+
+#about div.row > div:nth-child(1){margin-left: auto;}
+#about div.row > div:nth-child(2){margin-right: auto;}
+
+.follow-me{}
+
+footer {
+	background-color: #9dc9dc;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+footer .cc-footer{
+	color: #000000;
+	text-align: center;
+	margin: 0px;
+	padding: 0px;
+}
+
+p{	font-family: 'Barlow Semi Condensed',sans-serif;}
+
+
+
+
+/*--------------------------------*/
+@media only screen and (max-width: 995px) {
+
+	.intro-section .intro{
+		flex-direction: column-reverse;
+	}
+	.banner-img, .banner-intro {
+    	width: 100%;
+	}
+	.banner-intro{margin-top: 50px;}
+  
+}
