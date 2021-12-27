@@ -1,6 +1,32 @@
 # https://www.opentechguides.com/how-to/article/apache/115/htaccess-file-dir-security.html
 # https://help.dreamhost.com/hc/en-us/articles/216363167-How-do-I-deny-access-to-my-site-with-an-htaccess-file-
 
+
+#--------------------------------------------------------------
+# enable mod_rewrite
+RewriteEngine On
+RewriteBase /
+ 
+# RewriteCond = define rule condition
+# HTTP_REFERER = check from where the request originated
+# ! = exclude
+# ^ = start of string
+# [NC] = case insensitive search
+RewriteCond %{HTTP_REFERER} !^http://localhost/santoshmagar/ [NC]
+ 
+# \ = match any
+# . = any character
+# () = pattern, group
+# $ = end of string 
+# [F] = forbidden, 403
+# [L] = stop processing further rules
+
+RewriteRule \.(gif|jpg|jpeg|png|svg|mp4|mov|mkv|flv|css|js)$ - [F,L]
+
+#Redirect 404 to Homepage
+ErrorDocument 404 /
+ErrorDocument 403 /
+
 # Disable directory browsing 
 Options -Indexes
 IndexIgnore *.html
@@ -11,6 +37,3 @@ Order allow,deny
 Deny from all
 </FilesMatch>
 
-#Redirect 404 to Homepage
-ErrorDocument 404 /
-ErrorDocument 403 /
