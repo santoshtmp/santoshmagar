@@ -13,38 +13,55 @@
 	<!-- Google fonts-->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
 	<link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+	<!-- bootstrap -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<!-- custooom css -->
 	<link rel="stylesheet" type="text/css" href="assets/css/santosh-magar.css">
-	<!-- for icon -->
 	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+	<!-- jquery -->
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
 </head>
 <body id="home">
 	<!-- ------nav header--------- -->
-	<nav >
+	<nav class="header-nav">
 		<div class="container">  
-			<div class="right-header">
-				<a href="/">
-					<img src="assets/images/logo-stmp-002.jpg" alt="logo">
-				</a>
-			</div>
-			<div class="left-header">
-				<div class="main-navigation-list">
-					<ul>
-						<li>
-							<a href="#home"> Home</a>
-						</li>
-						<li>
-							<a href="#about"> About</a>
-						</li>
-						<li>
-							<a href="#contact"> Contact </a>
-						</li>
-					</ul>
+			<div class="header-combine">
+				<div class="right-header">
+					<a href="/">
+						<img id="site-logo" src="assets/images/logo-stmp-001.png" alt="logo">
+					</a>
+				</div>
+				<div class="left-header">
+					<div class="main-navigation-list">
+						<ul>
+							<li>
+								<a href="#home"> Home</a>
+							</li>
+							<li>
+								<a href="#about"> About</a>
+							</li>
+							<li>
+								<a href="#contact"> Contact </a>
+							</li>
+						</ul>
+					</div>
+					<div class="ham-navigation-list">
+						<img class="ham" src="assets/icon/menu-line.svg">
+					</div>
 				</div>
 			</div>
+			<ul class="ham-list">
+				<li>
+					<a href="#home"> Home</a>
+				</li>
+				<li>
+					<a href="#about"> About</a>
+				</li>
+				<li>
+					<a href="#contact"> Contact </a>
+				</li>
+			</ul>
 		</div>
 	</nav>
 	<!-- -------first content------- -->
@@ -82,12 +99,29 @@
 		<div class="container"> 
 			<div class="about-head">
 				<h2>About me</h2>
-				<h5 class="about-content"> 
-					<strong>
-						I am an enthusiastic web developer based in Kathmandu Nepal, with a rich experience of over 1+ year in LMS website along with other commercial and personal website design and development.
-						I have completed by Bachelor of Engineering in Information Technology [BE-IT] from Nepal college of Information Technology [NCIT], 2019. Since then i have been heavily involved in IT industry.
-					</strong>
-				</h5>
+				<div class="about-content"> 
+					<h5 style="display: inline;">
+						<strong>
+							I am an enthusiastic web developer based in Kathmandu Nepal, with a rich experience of over 1+ year in LMS website along with other commercial and personal website design and development.
+							I have completed by Bachelor of Engineering in Information Technology [BE-IT] from Nepal college of Information Technology [NCIT], 2019. Since then i have been heavily involved in IT industry.
+						</strong>
+					</h5>
+					<p id="know_more" style="display: inline;">know more ..... </p>
+				</div>
+				<div id="knowModal" class="modal_popup">
+					<div class="modal_content_popup">
+						<span class="close_knowModal close_popup">&times;</span>
+						<div>
+							<h4>Education</h4>
+							<div>
+								<li><i class="ri-award-fill" style="font-size: 32px;"></i> SLC</li>
+								<li>HSEB</li>
+								<li>Bachelor</li>
+							</div>
+						</div>
+					</div>
+
+				</div>
 			</div>
 			<div class="about-head">
 				<h2>What I do</h2>
@@ -97,18 +131,67 @@
 			</div>
 			<div class="row">
 				<div class="col-lg-3">
-					<img class="icon-img" src="assets/icon/code-box-fill.png"> 
-					<div >
-						<h4>Web Development</h4>
-						<p> If you are looking for a developer who’ll take over the research and development of your website. I am here to help you.</p>
+					<div class="what-i-do">
+						<img class="icon-img" src="assets/icon/code-box-fill.png"> 
+						<div >
+							<h4>Web Development</h4>
+							<p> If you are looking for a developer who’ll take over the research and development of your website. I am here to help you.</p>
+						</div>
 					</div>
 				</div>
 				<div class="col-lg-3">
-					<img  class="icon-img" src="assets/icon/book-open-fill.png">
-					<div>
-						<h4>LMS Development </h4>
-						<p>If you are looking for a user-friendly LMS (Learning Management System) for your institution that will attract more users, I can help you design and build a platform with the latest and trendiest look and feel.</p>
+					<div class="what-i-do">
+						<img  class="icon-img" src="assets/icon/book-open-fill.png">
+						<div>
+							<h4>LMS Development </h4>
+							<p>If you are looking for a user-friendly LMS (Learning Management System) for your institution that will attract more users, I can help you design and build a platform with the latest and trendiest look and feel.</p>
+						</div>
 					</div>
+				</div>
+			</div>
+		</div>
+		<div class="element-back-ig">	<div class="back-ig-inner"></div>	</div>
+		<div class="container"> 
+			<div class="row exp-skil">
+				<div class="myexperience col-lg-6">
+					<h2>My Experience</h2>
+					<div class="experience-collection">
+						<div class="experience-collection-col-1">
+							<div class="join-date"> <h6> Jan 2021 - </h6> </div>
+							<div class="arrow-01"> <i class="ri-arrow-right-circle-line"></i>  </div>
+							<div class="join-company">  <p> <a href="https://younginnovations.com.np/" target="_blank">YoungInnocations</a> </p></div>
+						</div>
+						<div class="experience-collection-col-2">
+							<h4> Software Engineer I (e-Learning) </h4>
+							<p>  Install, configure and manage other setting to deploy moodle LMS sites, Manage moodle website through customization/creating necessary plugins, Create and deploy courses using h5p and SCORM on moodle LMS platform, Develop document and give guideline on using LMS sites.  </p>
+						</div>
+					</div>
+					<div class="experience-collection">
+						<div class="experience-collection-col-1">
+							<div class="join-date"> <h6> Oct 2020 - </h6> </div>
+							<div class="arrow-01"> <i class="ri-arrow-right-circle-line"></i>  </div>
+							<div class="join-company">  <p> <a href="https://dansonsolutions.com/" target="_blank">Danson Solution</a> </p></div>
+						</div>
+						<div class="experience-collection-col-2">
+							<h4> Moodle Developer and Administration </h4>
+							<p> Manage and provide course / user / system report to respective person. Also customize report using base on demand using moodle database, Develop course content base on moodle h5p, pages, quizzes, assignment and many more, Give training/guideline to instructor in order to use LMS platform, Maintain user permission and user role / account in system, Also the course enrolment process and Customize moodle block using CSS, HTML, JS and PHP.   </p>
+						</div>
+					</div>
+					<div class="experience-collection">
+						<div class="experience-collection-col-1">
+							<div class="join-date"> <h6> Aug - Nov 2020 </h6> </div>
+							<div class="arrow-01"> <i class="ri-arrow-right-circle-line"></i>  </div>
+							<div class="join-company">  <p> <a href="https://openmynetwork.com/" target="_blank">Open My Network</a> </p></div>
+						</div>
+						<div class="experience-collection-col-2">
+							<h4> Website Tester & UI/UX Designer </h4>
+							<p>  OMN website testing for usability and functionality issues then create FRD to improve the system. Design UI and prototype in framer to improve latest system Work on Python RASA framework to help on creating chatbot that could answer student queries.  </p>
+						</div>
+					</div>
+					
+				</div>
+				<div class="myskill col-lg-6">
+					<h2>Skills</h2>
 				</div>
 			</div>
 		</div>
@@ -117,19 +200,30 @@
 	<section id="contact" >
 		<div class="container">
 			<div class="logo-contact">
-				<img src="assets/images/logo-santoshmagar.png">
-				<h4 >Contact Info ...  </h4>
+				<div class="logo-circle">
+					<img  src="assets/images/logo-santoshmagar.png">
+				</div>
+				<h4 class="contact-header">Contact Info ...  </h4>
 			</div>
 			<div class="row">
 				<div class="col-sm-4 ">
 					<div class="contact-element-title">Location</div>
-					<div class="contact-element-content">Suryadarshan height, Baniyataar, Tokha, Kathmandu, Nepal</div>
+					<div class="contact-element-content">Suryadarshan height, Baniyataar, Tokha, Kathmandu, Nepal
+						<p id="map_popup"> <img src="assets/icon/map-pin-line.svg"> open map</p>
+					</div>
+					<div id="mapModal" class="modal_popup">
+						<div class="modal_content_popup">
+							<span class="close_mapModal close_popup">&times;</span>
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3530.7239415452714!2d85.31964351433429!3d27.756659529931525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1ff773ee470d%3A0x2fa047977be73876!2sSuryadarshan%20Height%20Bus%20Station!5e0!3m2!1sen!2snp!4v1640592481369!5m2!1sen!2snp" width="100%" height="80%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+						</div>
+
+					</div>
 				</div>
 				<div class="col-sm-4 ">
 					<div class="contact-element-title">Contact </div>
 					<div class="contact-element-content">
-						<p> Phone : +977-9803928344	</p>
-						<p>	Email : santoshtmp7@gmail.com</p>
+						<p class="ph"> Phone : <a href="tel:+977-9803928344">+977-9803928344</a> 	</p>
+						<p class="mail">	Email : <a href="mailto: santoshtmp7@gmail.com">santoshtmp7@gmail.com </a> </p>
 					</div>
 				</div>
 				<div class="col-sm-4 ">
@@ -146,8 +240,12 @@
 	<!-- -------footer content------- -->
 	<footer class="footer-main">
 		<div class="container">
-			<p class="cc-footer">© Copyrights 2021. All rights reserved. santoshmagar</p>
+			<p class="cc-footer">
+				<marquee direction="right">© Copyrights 2021. All rights reserved. santoshmagar</marquee>
+			</p>
 		</div>
 	</footer>
+	<!-- ----------------custom js call------------ -->
+	<script type="text/javascript" src="assets/js/santosh-magar-js.js"></script>
 </body>
 </html>
