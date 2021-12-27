@@ -292,7 +292,13 @@ footer .cc-footer{
 	padding: 0px;
 }
 
-
+#main {display: flex; flex-direction: column; min-height: 100%;}
+#main .footer-main {  margin-top: auto; }
+.error-404 {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10%;}
 
 /*--------------------------------*/
 @media only screen and (max-width: 995px) {
