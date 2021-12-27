@@ -1,0 +1,16 @@
+# https://www.opentechguides.com/how-to/article/apache/115/htaccess-file-dir-security.html
+# https://help.dreamhost.com/hc/en-us/articles/216363167-How-do-I-deny-access-to-my-site-with-an-htaccess-file-
+
+# Disable directory browsing 
+Options -Indexes
+IndexIgnore *.html
+
+# Deny access to filenames starting with dot(.)
+<FilesMatch "^\.">
+Order allow,deny
+Deny from all
+</FilesMatch>
+
+#Redirect 404 to Homepage
+ErrorDocument 404 /
+ErrorDocument 403 /

@@ -132,7 +132,7 @@ div.about-head:nth-child(2) {    padding: 20px 0px;}
 	font-weight: bold;
 	font-family: 'Playfair Display',serif;
 	line-height: 1.2;
-	color: #009BDF;
+	color: #3298DB;
 	margin-bottom: 20px;
 }
 
@@ -171,11 +171,12 @@ div.about-head:nth-child(2) {    padding: 20px 0px;}
 .myexperience .experience-collection { display: flex; flex-direction: row;  padding: 10px 10px 10px 0;}
 .experience-collection-col-1 { display: flex; flex-direction: column;  padding: 10px;}
 .experience-collection-col-2 { padding: 15px;}
-.experience-collection-col-2 h4 {color: #009bdf; text-transform: uppercase; font-weight: 500;}
+.experience-collection-col-2 h4 {color: #3298DB; text-transform: uppercase; font-weight: 500;}
 
 .ri-arrow-right-circle-line {    font-size: 24px;    float: right; }
 .join-date h6 { font-weight: bold;  float: right; }
 .join-date, .join-company {padding: 0 20px 0 0; min-width: 150px; }
+.join-company a {color: #3298DB}
 /*----------custom modal-----------------*/
 /* The Modal (background) */
 .modal_popup {
