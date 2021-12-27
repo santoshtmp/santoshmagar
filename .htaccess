@@ -21,7 +21,7 @@ RewriteCond %{HTTP_REFERER} !^http://localhost/santoshmagar/ [NC]
 # [F] = forbidden, 403
 # [L] = stop processing further rules
 
-RewriteRule \.(gif|jpg|jpeg|png|svg|mp4|mov|mkv|flv|css|js)$ - [F,L]
+RewriteRule \.(gif|jpg|jpeg|png|svg|mp4|mov|mkv|flv|js)$ - [F,L]
 
 #Redirect 404 to Homepage
 ErrorDocument 404 /
