@@ -89,15 +89,6 @@ a{text-decoration: none;}
 	line-height: 1em;
 	padding-left: 7px;
 }
-.banner-intro > h6{animation:rotate_hellostm 4s 1 }
-@keyframes rotate_hellostm {
-  0%,100%{
-		transform: rotate(0deg);
-	}
-	50% {
-		transform: rotate(359deg);
-	}
-}
 
 .heading-title {animation:slidein_stm 4s 1 }
 @keyframes slidein_stm {
@@ -179,7 +170,7 @@ div.about-head:nth-child(2) {    padding: 20px 0px;}
 .myexperience h2, .myskill h2 {font-size: 42px; font-weight: bold;}
 .myexperience .experience-collection { display: flex; flex-direction: row;  padding: 10px 10px 10px 0;}
 .experience-collection-col-1 { display: flex; flex-direction: column;  padding: 10px;}
-.experience-collection-col-2 { padding: 15px 0 0 15px;}
+.experience-collection-col-2 { padding: 15px;}
 .experience-collection-col-2 h4 {color: #009bdf; text-transform: uppercase; font-weight: 500;}
 
 .ri-arrow-right-circle-line {    font-size: 24px;    float: right; }
@@ -300,12 +291,6 @@ footer .cc-footer{
 	padding: 0px;
 }
 
-/*----------------map----------------*/
-#map {
-  height: 400px;
-  width: 100%;
-}
-
 
 
 /*--------------------------------*/
@@ -327,9 +312,10 @@ footer .cc-footer{
 	.main-navigation-list {display: none;}
 	.ham-navigation-list { 	margin-left: auto;	margin-right: 10px;	}
 	.ham-navigation-list .ham {cursor: pointer;float: right;}
-	.ham-list { background-color: white; padding-bottom: 20px; padding-right: 5%; float: right;}
+	.ham-list { background-color: white; padding-bottom: 20px; padding-right: 5%; width: 100%;}
 	.ham-list li {font-weight: bold; padding: 10px;}
 	.ham-hide {display: none;}
+	.ham-list .ri-arrow-right-line {    float: right; }
 
 	#contact .contact-header{font-size: 25px;}
 }
