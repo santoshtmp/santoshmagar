@@ -86,6 +86,19 @@
   			x = (x === logos.length - 1) ? 0 : x + 1;
   			site_logo.src='https://santoshmagar.com.np/assets/images/'.concat(logos[x])
 		},2000);
+		
+		// ---------------------------------------------------
+		$(".header-nav").each(function(){
+  			var toggleUD = $(this).find('.ham-list');
+  			toggleUD.addClass("ham-hide");
+  			$(this).find('.ham').click(function(){
+    				toggleUD.toggleClass("ham-hide");
+  			})
+		});
+
+		$(".ham-list li").click(function(){
+  			$(".ham-list").addClass("ham-hide");
+		});
 	</script>
 </body>
 </html>
