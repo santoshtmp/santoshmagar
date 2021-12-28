@@ -8,6 +8,7 @@ nav{
     background-color: white;
     height: 100px;
     width: 100%;
+    z-index: 1;
 }
 
 li{list-style: none;}
@@ -41,7 +42,7 @@ li{list-style: none;}
 a{text-decoration: none;}
 
 .intro-section{
-	padding-top: 100px;
+	padding-top: 100px; min-height: 627px;
 }
 
 .intro.container {
@@ -62,14 +63,14 @@ a{text-decoration: none;}
 .banner-intro .heading-title{
 	line-height: 1.1;
 	color: Black;
-	font-size: 4.8823529411765rem;
+	font-size: 3rem;
 	font-weight: 800;
 	font-family: 'Playfair Display',serif;}
 
 .banner-intro h6 {
 	margin: 0;
 	text-transform: uppercase;
-	color: #758396;
+	color: #007bff;
 	font-size: 1rem;
 	font-family: 'Barlow Semi Condensed',sans-serif;
 	font-weight: bold;}
@@ -77,9 +78,9 @@ a{text-decoration: none;}
 .banner-w{padding: 0px 0px 65px 0px;} 
 
 .banner-w h3{
-	color: #758396;
+	color: #007bff;
 	line-height: 1.2;
-	font-size: 2.0588235294118rem;
+	font-size: 1rem;
 	font-weight: 800;
 	font-family: 'Playfair Display',serif;
 }
@@ -103,8 +104,9 @@ a{text-decoration: none;}
   }
 }
 
-.mail a, .ph a{	color: #000000;}
+.mail a, .ph a{	color: #000000;text-decoration: none;}
 .mail a:hover, .ph a:hover{	color: #000000;font-weight: bold;}
+.ri-mail-fill, .ri-phone-fill{font-size: 20px;}
 
 .social-link .facebook-link a{	content:  url("../icon/facebook-box-fill.svg");}
 .social-link .facebook-link a:hover {	content:  url("../icon/facebook-box-fill-192FE6.svg");}
@@ -145,6 +147,8 @@ div.about-head:nth-child(2) {    padding: 20px 0px;}
 	align-self: center;
 }
 
+.ri-award-fill{font-size: 32px;}
+
 .what-i-do { display: grid;    grid-template-columns: auto auto; margin-bottom: 50px;}
 .what-i-do .icon-img {    margin: 5px; padding-right: 10px;}
 .what-i-do p{ font-family: 'Playfair Display',serif;}
@@ -172,11 +176,25 @@ div.about-head:nth-child(2) {    padding: 20px 0px;}
 .experience-collection-col-1 { display: flex; flex-direction: column;  padding: 10px;}
 .experience-collection-col-2 { padding: 15px;}
 .experience-collection-col-2 h4 {color: #3298DB; text-transform: uppercase; font-weight: 500;}
+.skills-collection{ display: grid; grid-template-columns: auto auto;  padding: 10px;}
+.ri-checkbox-circle-line{font-size: 20px;}
+.skills-collection-col{padding:10px 0px 10px 10px; display: flex; flex-direction: row; border-bottom: 1px solid aliceblue;}
+.myskill h5 {    padding: 0 0 0 20px;    margin-bottom: 0px;}
+.myskill i {    padding-right:10px;    margin-bottom: 0px;}
+.myskill .skills-collection img { }
+.myskill .myimg {  padding: 30px;    margin: 40px;}
+.myskill .myimg img{ width: 100% }
 
 .ri-arrow-right-circle-line {    font-size: 24px;    float: right; }
 .join-date h6 { font-weight: bold;  float: right; }
 .join-date, .join-company {padding: 0 20px 0 0; min-width: 150px; }
 .join-company a {color: #3298DB}
+/*--------------bootstrap modal----------*/
+.modal-open{overflow: unset; padding-right: 0px !important;}
+.modal-on{cursor: pointer;color: #3298DB;font-weight: bold; text-decoration: underline;}
+.modal-on:hover{color: #192FE6;}
+.modal-dialog{margin-top: 100px;}
+.modal-title{color: black; font-size: 28px;}
 /*----------custom modal-----------------*/
 /* The Modal (background) */
 .modal_popup {
@@ -217,6 +235,7 @@ div.about-head:nth-child(2) {    padding: 20px 0px;}
   text-decoration: none;
   cursor: pointer;
 }
+
 #know_more, #map_popup{
 	cursor: pointer;
 	text-decoration: underline;
@@ -300,17 +319,19 @@ footer .cc-footer{
     text-align: center;
     margin-top: 10%;}
 
+
+
 /*--------------------------------*/
-@media only screen and (max-width: 995px) {
+@media only screen and (max-width: 990px) {
 
 	.intro-section .intro{
 		flex-direction: column-reverse;
 	}
-	.banner-img, .banner-intro {
-    	width: 100%;
-	}
+	.banner-img, .banner-intro {	width: 100%; }
 	.banner-intro{margin-top: 50px;margin-bottom: 0px;}
 	.banner-img{margin-bottom: 50px;}
+
+	.myimg{display: none;}
   
 }
 
