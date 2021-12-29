@@ -181,7 +181,7 @@ div.about-head:nth-child(2) {    padding: 20px 0px;}
 .skills-collection-col{padding:10px 0px 10px 10px; display: flex; flex-direction: row; border-bottom: 1px solid aliceblue;}
 .myskill h5 {    padding: 0 0 0 20px;    margin-bottom: 0px;}
 .myskill i {    padding-right:10px;    margin-bottom: 0px;}
-.myskill .skills-collection img { }
+.myskill .skills-collection img { width: 32px; height: 32px; }
 .myskill .myimg {  padding: 30px;    margin: 40px;}
 .myskill .myimg img{ width: 100% }
 
