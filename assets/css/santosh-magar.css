@@ -217,6 +217,8 @@ div.about-head:nth-child(2) {    padding: 20px 0px;}
 .experience-collection-col-1 { display: flex; flex-direction: column;  padding: 10px;}
 .experience-collection-col-2 { padding: 15px;}
 .experience-collection-col-2 h4 {color: #3298DB; text-transform: uppercase; font-weight: 500;}
+.experience-collection-col-2 ol {padding: 0px;}
+.experience-collection-col-2 ol li {list-style-type: "+"; padding-left: 10px;}
 .skills-collection{ display: grid; grid-template-columns: auto auto;  padding: 10px;}
 .ri-checkbox-circle-line{font-size: 20px;}
 .skills-collection-col{padding:10px 0px 10px 10px; display: flex; flex-direction: row; border-bottom: 1px solid aliceblue;}
