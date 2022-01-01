@@ -9,24 +9,24 @@ setInterval(function () {
 
 // -------------------------------------
 
-var btn_map_popup = document.getElementById("map_popup");
-if (btn_map_popup) {
-  btn_map_popup.onclick = function () {
-    var val = 'mapModal';
-    var modal = document.getElementById(val);
-    modal.style.display = "block";
-    window.onclick = function(event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
-    let close="close_".concat(val);
-    var span = document.getElementsByClassName(close)[0];
-    span.onclick = function() {
-      modal.style.display = "none";
-    }
-  }
-}
+// var btn_map_popup = document.getElementById("map_popup");
+// if (btn_map_popup) {
+//   btn_map_popup.onclick = function () {
+//     var val = 'mapModal';
+//     var modal = document.getElementById(val);
+//     modal.style.display = "block";
+//     window.onclick = function(event) {
+//       if (event.target == modal) {
+//         modal.style.display = "none";
+//       }
+//     }
+//     let close="close_".concat(val);
+//     var span = document.getElementsByClassName(close)[0];
+//     span.onclick = function() {
+//       modal.style.display = "none";
+//     }
+//   }
+// }
 
 // ---------------------------------------------------
 $(".header-nav").each(function(){
