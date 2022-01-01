@@ -1,6 +1,6 @@
 // --------site logo change in every 2 sec---
 let site_logo=document.getElementById('site-logo');
-let logos=['logo-stmp-001.png','logo-stmp-002.png','logo-stmp-003.png','logo-stmp-004.png'];
+let logos=['logo-stmp-001.png','logo-stmp-002.png','logo-stmp-003.png','logo-stmp-004.png','logo-stmp-005.png','logo-stmp-006.png'];
 var x = -1;
 setInterval(function () {
   x = (x === logos.length - 1) ? 0 : x + 1;
