@@ -7,28 +7,9 @@ setInterval(function () {
   site_logo.src='assets/images/'.concat(logos[x])
 },2000);
 
-// -------------------------------------
 
-// var btn_map_popup = document.getElementById("map_popup");
-// if (btn_map_popup) {
-//   btn_map_popup.onclick = function () {
-//     var val = 'mapModal';
-//     var modal = document.getElementById(val);
-//     modal.style.display = "block";
-//     window.onclick = function(event) {
-//       if (event.target == modal) {
-//         modal.style.display = "none";
-//       }
-//     }
-//     let close="close_".concat(val);
-//     var span = document.getElementsByClassName(close)[0];
-//     span.onclick = function() {
-//       modal.style.display = "none";
-//     }
-//   }
-// }
 
-// ---------------------------------------------------
+// ----------------------header nav-----------------------------
 $(".header-nav").each(function(){
   var toggleUD = $(this).find('.ham-list');
   toggleUD.addClass("ham-hide");
@@ -41,5 +22,85 @@ $(".ham-list li").click(function(){
   $(".ham-list").addClass("ham-hide");
 });
 
-// ----------------------------------------------------
+// ---------------------click: load more -------------------------------
 
+$("#btn_load_more").click(function(){
+	var html_content = '<div> <p> No More Data ... comming soon ...</p>  <i class="ri-error-warning-fill"></i>  </div>';
+	var check = $('.info-load');
+	if (check.length==0) { 
+		$("#other-info").append(html_content );
+	}
+	$('#other-info').addClass('info-load');
+  $(this).hide();
+});
+
+// ------------------------click show info_hide---------------------------------------
+$(".email_addr .ri-error-warning-line").click(function(){
+  $(".email_addr span").toggleClass("info_hide");
+});
+$(".phone_addr .ri-error-warning-line").click(function(){
+  $(".phone_addr span").toggleClass("info_hide");
+});
+// --------------------click send mail-----------------------
+
+$(document).ready(function() {
+  $("#contact-form").validate({
+   rules: {
+      inputPhone: {
+        minlength: 10,
+        digits: true
+      }
+   },
+   messages: {
+      inputPhone: {
+        number: 'Accept only number',
+      }
+   },
+   submitHandler: function(form) {
+      return false;
+      //    form.submit();
+   }
+ });
+
+
+  $('#send_email').click(function(){
+     if($("#contact-form").valid()){
+    var inputFirstName = $("#inputFirstName").val(); 
+    var inputLastName = $("#inputLastName").val();
+    var inputEmail = $("#inputEmail").val(); 
+    var inputPhone = $("#inputPhone").val(); 
+    var inputMessage = $("#inputMessage").val(); 
+    var return_msg_send = "<div> <p>First Name : "+inputFirstName+" </p>  <p>Last Name : "+inputLastName+" </p>  <p>Email : "+inputEmail+" </p>  <p>Phone Number : "+inputPhone+" </p>    <p>Message : "+inputMessage+" </p>     </div> ";
+    $(".msg_send").append(return_msg_send);
+    $("#msgModal").css({"display":"block"});
+    var email_body_site_admin = "<div> santoshmagar.com.np Get In Touch Message : <p>First Name : "+inputFirstName+" </p>  <p>Last Name : "+inputLastName+" </p>  <p>Email : "+inputEmail+" </p>  <p>Phone Number : "+inputPhone+" </p>    <p>Message : "+inputMessage+" </p>     </div> ";
+    const host= "smtp.gmail.com";
+    const uname= "santoshmagarcomnp@gmail.com";
+    const pp ="snp!!2#COM7";
+    const from = "no-reply@santoshmagar.com";
+    Email.send({
+        Host: host,
+        Username: uname,
+        Password: pp,
+        To: 'santoshtmp7@gmail.com',
+        From: from,
+        Subject: "santoshmagar.com.np Message",
+        Body: email_body_site_admin,
+    });
+    var email_body_user = "<div>Dear "+inputFirstName+", </p>  Thanks for reaching out! <br> We'll contact you soon .. <p>Regards <br> <a href='https://santoshmagar.com.np'>santoshmagar.com.np</a></p></div> ";
+    Email.send({
+        Host: host,
+        Username: uname,
+        Password: pp,
+        To: inputEmail,
+        From: from,
+        Subject: "Thank you",
+        Body: email_body_user,
+    });
+  }
+});
+
+
+});
+
+// -------------------------------------------------------------------------------------------------------------------------
