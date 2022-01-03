@@ -314,7 +314,7 @@
 		<div class="container"> 
 			<div class="row">
 				<h2>Portfolio</h2> 
-				<a class="btn_primary" id="download_cv" href="assets/files/cv-santosh.pdf"   download> Download CV </a>
+				<a class="btn_primary" id="download_cv" href="assets/files/cv-santosh.pdf"   download> Download CV <i class="ri-file-download-line"></i> </a>
 			</div>
 			<div class="row">
 				<div class="col-sm-6 col-lg-3"> 
@@ -324,6 +324,10 @@
 				<div class="col-sm-6 col-lg-3"> 
 					<div class="thumb"> <a href="#portfolio"> <img src="assets/images/portfolio/eelms-home.png"></a> </div>
 					<div class="details"> <a href="#portfolio"> <h5> EELMS </h5> <i class="ri-arrow-right-fill"></i> </a> </div>
+				</div>
+				<div class="col-sm-6 col-lg-3"> 
+					<div class="thumb"> <a href="#portfolio"> <img src="assets/images/portfolio/medismart-ausadipasal.png"></a> </div>
+					<div class="details"> <a href="#portfolio"> <h5> Medismart ausadipasal </h5> <i class="ri-arrow-right-fill"></i> </a> </div>
 				</div>
 			</div> 
 			<button id="btn_load_more" class="btn_primary"> Load More </button>
@@ -340,20 +344,20 @@
 				<h4 class="contact-header">Contact Info ...  </h4>
 			</div>
 			<div class="row">
-				<div class="col-sm-4 ">
+				<!-- <div class="col-sm-4 ">
 					<div class="contact-element-title">Location</div>
 					<div class="contact-element-content">Suryadarshan height, Baniyataar, Tokha, Kathmandu, Nepal
 						<p id="map_popup"> <a href="https://goo.gl/maps/xwjPvJ2EAj9zbqZeA" target="_blank"> <img src="assets/icon/map-pin-line.svg"> open map </a></p>
 					</div>
-				</div>
-				<div class="col-sm-4 ">
+				</div> -->
+				<div class="col-lg-3">
 					<div class="contact-element-title">Contact </div>
 					<div class="contact-element-content">
 						<p class="ph"> Phone : <a href="tel:+977-9803928344">+977-9803928344</a> 	</p>
 						<p class="mail">	Email : <a href="mailto: santoshtmp7@gmail.com">santoshtmp7@gmail.com </a> </p>
 					</div>
 				</div>
-				<div class="col-sm-4 ">
+				<div class="col-lg-3">
 					<div class="contact-element-title">Follow Me ... </div>
 					<div class="social-link">
 						<li class="facebook-link"><a href="https://www.facebook.com/santoshtmpulami" target="_blank"></a></li>
@@ -363,9 +367,9 @@
 				</div>
 			</div> 
 			<div class="row">
-				<div class="contact-form">
+				<div class="contact-form" id="inquiry">
 					<h2> Get In Touch </h2>
-					<h2> For Work / General Enquery. </h2>
+					<h2> For Work / General Inquiry. </h2>
 					<form method="post" id="contact-form">
 						<div class="row">
 							<div class="col-lg-6">
@@ -407,9 +411,11 @@
 						<div class="modal_content_popup">
 							<!-- <span class="close_msgModal close_popup">&times;</span> -->
 							<div  class="msg_send" > 
-								<h5>Thank you for Getting In Touch.</h5>
 							</div>
-							<a href="/" class="btn_primary"> Return</a>
+							<div>
+								<a href="/" class="btn_primary" id="send_ok"> OK</a>
+								<a href="#inquiry" class="btn_primary" id="send_return"> Return</a>
+							</div>
 						</div>
 			</div>
 		</div>

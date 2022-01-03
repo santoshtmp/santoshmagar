@@ -46,59 +46,80 @@ $(".phone_addr .ri-error-warning-line").click(function(){
 $(document).ready(function() {
   $("#contact-form").validate({
    rules: {
-      inputPhone: {
-        minlength: 10,
-        digits: true
-      }
-   },
-   messages: {
-      inputPhone: {
-        number: 'Accept only number',
-      }
-   },
-   submitHandler: function(form) {
-      return false;
+    inputPhone: {
+      minlength: 10,
+      digits: true
+    }
+  },
+  messages: {
+    inputPhone: {
+      number: 'Accept only number',
+    }
+  },
+  submitHandler: function(form) {
+    return false;
       //    form.submit();
-   }
- });
+    }
+  });
 
+  const host= "smtp.gmail.com";
+  const uname= "santoshmagarcomnp@gmail.com";
+  const pp ="snp!!2#COM7";
+  const from = "no-reply@santoshmagar.com";
+  const sendto = 'santoshtmp7@gmail.com';
 
   $('#send_email').click(function(){
-     if($("#contact-form").valid()){
+   if($("#contact-form").valid()){
     var inputFirstName = $("#inputFirstName").val(); 
     var inputLastName = $("#inputLastName").val();
     var inputEmail = $("#inputEmail").val(); 
     var inputPhone = $("#inputPhone").val(); 
     var inputMessage = $("#inputMessage").val(); 
-    var return_msg_send = "<div> <p>First Name : "+inputFirstName+" </p>  <p>Last Name : "+inputLastName+" </p>  <p>Email : "+inputEmail+" </p>  <p>Phone Number : "+inputPhone+" </p>    <p>Message : "+inputMessage+" </p>     </div> ";
+    var return_msg_send = "<h5>Thank you for Getting In Touch.</h5><div> <p>First Name : "+inputFirstName+" </p>  <p>Last Name : "+inputLastName+" </p>  <p>Email : "+inputEmail+" </p>  <p>Phone Number : "+inputPhone+" </p>    <p>Message : "+inputMessage+" </p>     </div> ";
+    $(".msg_send").empty();
     $(".msg_send").append(return_msg_send);
     $("#msgModal").css({"display":"block"});
     var email_body_site_admin = "<div> santoshmagar.com.np Get In Touch Message : <p>First Name : "+inputFirstName+" </p>  <p>Last Name : "+inputLastName+" </p>  <p>Email : "+inputEmail+" </p>  <p>Phone Number : "+inputPhone+" </p>    <p>Message : "+inputMessage+" </p>     </div> ";
-    const host= "smtp.gmail.com";
-    const uname= "santoshmagarcomnp@gmail.com";
-    const pp ="snp!!2#COM7";
-    const from = "no-reply@santoshmagar.com";
+    
     Email.send({
-        Host: host,
-        Username: uname,
-        Password: pp,
-        To: 'santoshtmp7@gmail.com',
-        From: from,
-        Subject: "santoshmagar.com.np Message",
-        Body: email_body_site_admin,
+      Host: host,
+      Username: uname,
+      Password: pp,
+      To: sendto,
+      From: from,
+      Subject: "santoshmagar.com.np Message",
+      Body: email_body_site_admin,
     });
-    var email_body_user = "<div>Dear "+inputFirstName+", </p>  Thanks for reaching out! <br> We'll contact you soon .. <p>Regards <br> <a href='https://santoshmagar.com.np'>santoshmagar.com.np</a></p></div> ";
+   
+  }
+});
+
+
+$('#send_ok').click(function(){
+   if($("#contact-form").valid()){
+    var inputFirstName = $("#inputFirstName").val(); 
+    var inputLastName = $("#inputLastName").val();
+    var inputEmail = $("#inputEmail").val(); 
+    var inputPhone = $("#inputPhone").val(); 
+    var inputMessage = $("#inputMessage").val();     
+    var email_body_user = "<div>Dear "+inputFirstName+", <br> </p>  Thanks for reaching out! <br> We'll contact you soon .. <p>Regards <br> <a href='https://santoshmagar.com.np'>santoshmagar.com.np</a></p></div> ";
     Email.send({
-        Host: host,
-        Username: uname,
-        Password: pp,
-        To: inputEmail,
-        From: from,
-        Subject: "Thank you",
-        Body: email_body_user,
+      Host: host,
+      Username: uname,
+      Password: pp,
+      To: inputEmail,
+      From: from,
+      Subject: "Thank you",
+      Body: email_body_user,
     });
   }
 });
+
+
+$('#send_return').click(function(){
+  $("#msgModal").css({'display':'none'});
+});
+
 
 
 });

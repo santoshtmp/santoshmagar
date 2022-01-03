@@ -309,7 +309,7 @@ div.about-head:nth-child(2) {    padding: 20px 0px;}
 .info-load > div{ display: flex; }
 .info-load > div p {margin-left: auto;}
 .ri-error-warning-fill {margin-right: auto;}
-#portfolio > div:nth-child(1) > div:nth-child(1) {margin-bottom: 40px;}
+#portfolio > div:nth-child(1) > div:nth-child(1) {margin-bottom: 40px; padding: inherit;}
 #download_cv{margin-left: auto; text-decoration: none; }
 /*---------------- section :: contact content  ----------------------- */
 #contact{
@@ -363,7 +363,7 @@ div.about-head:nth-child(2) {    padding: 20px 0px;}
   to { margin-left: 0%;}
 }
 
-.contact-form {    max-width: 70%; margin: auto; padding: 20px; border-top: 1px solid #3298DB; border-bottom: 1px solid #3298DB;}
+.contact-form { margin: auto; padding: 20px; border-top: 1px solid #3298DB; border-bottom: 1px solid #3298DB;}
 .ri-error-warning-line {cursor: pointer;}
 .contact-form h2 {
     font-weight: bold;
@@ -380,11 +380,13 @@ div.about-head:nth-child(2) {    padding: 20px 0px;}
 .email_addr span, .phone_addr span , .error{color: red; font-size: 12px;} 
 .msg_send h5 {    text-align: center;    margin-bottom: 20px; font-weight: bold;}
 .msg_send p {margin-left: 10%; margin-right: 10%; }
-.msg_send > div:nth-child(2) > p:nth-child(5) {    overflow-y: scroll;}
 #msgModal .modal_content_popup {    display: flex;    flex-direction: column; }
-#msgModal .btn_primary {float: none; margin-left: auto;margin-right: auto; width: 150px;text-align: center; text-decoration: none;}
+#msgModal .btn_primary {float: none; margin-left: 10px; margin-right: 10px; text-align: center; text-decoration: none;}
 #msgModal .btn_primary a:hover {color: white;}
 #send_email {    float: right;}
+.modal_content_popup > div:nth-child(2) {margin-left: auto; margin-right: auto; display: flex;}
+#contact > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) {  margin-left: auto; }
+#contact > div:nth-child(1) > div:nth-child(2) > div:nth-child(2){ margin-right: auto;}
 
 /*------- section ::  footer  -----------------*/
 #map{
