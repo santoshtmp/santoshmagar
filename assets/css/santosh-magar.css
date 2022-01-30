@@ -210,6 +210,8 @@ div.about-head:nth-child(2) {    padding: 20px 0px;}
 	width: 100%;
 }
 
+.fiverr-proj{}
+
 .exp-skil{margin-top: 30px;}
 .myexperience , .myskill {font-family: 'Barlow Semi Condensed',sans-serif; padding: 10px;}
 .myexperience h2, .myskill h2 {font-size: 42px; font-weight: bold; color: #3298DB;}
