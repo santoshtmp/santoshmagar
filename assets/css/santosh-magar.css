@@ -475,3 +475,9 @@ footer .cc-footer{
 	.bg { width: 300px;	height: 300px; left: 10px; top: 550px;} 
 	.bg-1{left: 40px}
 }
+
+
+
+#portfolio > div:nth-child(1) > div:nth-child(2) {
+	display: none;
+  }
