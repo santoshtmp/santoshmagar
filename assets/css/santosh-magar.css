@@ -315,6 +315,7 @@ div.about-head:nth-child(2) {    padding: 20px 0px;}
 .info-load > div p {margin-left: auto;}
 .ri-error-warning-fill {margin-right: auto;}
 #portfolio > div:nth-child(1) > div:nth-child(1) {margin-bottom: 40px; padding: inherit;}
+#portfolio ol li{list-style: number;} 
 
 /*---------------- section :: contact content  ----------------------- */
 #contact{
