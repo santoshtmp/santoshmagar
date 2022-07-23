@@ -102,16 +102,14 @@ a{text-decoration: none;}
 .mail a:hover, .ph a:hover{	color: #000000;font-weight: bold;}
 .ri-mail-fill, .ri-phone-fill{font-size: 20px;}
 
-.social-link .facebook-link a{	content:  url("../icon/facebook-box-fill.svg");}
-.social-link .facebook-link a:hover {	content:  url("../icon/facebook-box-fill-192FE6.svg");}
-.social-link .github-link a{	content:  url("../icon/github-fill.svg");}
-.social-link .github-link a:hover {	content:  url("../icon/github-fill-192FE6.svg");}
-.social-link .linked-link a{	content:  url("../icon/linkedin-box-fill.svg");}
-.social-link .linked-link a:hover {	content:  url("../icon/linkedin-box-fill-192FE6.svg");}
+/* .social-link .facebook-link a i,
+.social-link .linked-link a i{font-size: 50px;} */
+/* .social-link .facebook-link a:hover ,
+.social-link .linked-link a:hover {text-decoration: none;} */
 .social-link {display: flex;margin-left: -5px;}
-.social-link li {    background-color: white;    margin: 0 5px;    border-radius: 4px;    width: 50px;	height: 50px;}
-.social-link li a{	border-radius: 4px;	width: 100%;	height: 100%;	border:1px solid #3298DB ;}
-.social-link li a:hover {  border:1px solid #192FE6 ;}
+.social-link li {    background-color: white;    margin: 0 5px;    border-radius: 4px; }
+.social-link li a i{ font-size: 50px;	border:1px solid #3298DB ; border-radius: 4px;}
+.social-link li a:hover{ text-decoration: none;}
 
 .download {	margin: 25px 0; }
 #download_cv{margin-left: auto; text-decoration: none; }
@@ -186,19 +184,19 @@ div.about-head:nth-child(2) {    padding: 20px 0px;}
 	line-height: 1.6;
 	color: #000000;
 	margin-bottom: 20px;
-	align-self: center;
+	/* align-self: center; */
 	font-family: 'Playfair Display',serif;
 }
 .about-content > h5, .about-content > .modal-on{display: inline;}
 
 .ri-award-fill{font-size: 32px;}
 
+.about-head .education-list .ri-medal-2-line{font-size: 25px;}
+
 .what-i-do { display: grid;    grid-template-columns: auto auto; margin-bottom: 50px;}
 .what-i-do .icon-img {    margin: 5px; padding-right: 10px;}
 .what-i-do h4, .what-i-do p{ font-family: 'Playfair Display',serif;}
-
-#about div.row > .col-lg-3:nth-child(1){margin-left: auto;}
-#about div.row > .col-lg-3:nth-child(3){margin-right: auto;}
+.what-i-do > i{font-size: 34px;	padding-right: 10px;}
 
 .element-back-ig{
 	background-image: url("../images/bg-04-free-img.jpg");
