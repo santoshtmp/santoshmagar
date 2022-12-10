@@ -76,7 +76,7 @@ $(document).ready(function() {
     var inputPhone = $("#inputPhone").val(); 
     var inputMessage = $("#inputMessage").val(); 
     // var return_msg_send = "<h5>Thank you for Getting In Touch.</h5><div> <p>First Name : "+inputFirstName+" </p>  <p>Last Name : "+inputLastName+" </p>  <p>Email : "+inputEmail+" </p>  <p>Phone Number : "+inputPhone+" </p>    <p>Message : "+inputMessage+" </p>     </div> ";
-    var return_msg_send = "<div  class='warning'> <span>Sorry message cannot be send. </span> <br> Please contact through Phone: +977-9803928344 OR Email: santoshtmp7@gmail.com </div><br>"
+    var return_msg_send = "<div  class='warning'> <span>Sorry message cannot be send. </span> <br> Please contact through <br> Phone: +977-9803928344 <br> OR <br> Email: santoshtmp7@gmail.com </div><br>"
     $(".msg_send").empty();
     $(".msg_send").append(return_msg_send);
     $("#msgModal").css({"display":"block"});
