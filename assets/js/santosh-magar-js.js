@@ -76,12 +76,11 @@ $(document).ready(function () {
       var inputPhone = $("#inputPhone").val();
       var inputMessage = $("#inputMessage").val();
       var return_msg_send = "<h5>Thank you for Getting In Touch.</h5><div> <p>First Name : " + inputFirstName + " </p>  <p>Last Name : " + inputLastName + " </p>  <p>Email : " + inputEmail + " </p> <p>Message : " + inputMessage + " </p></div> ";
-      // var return_msg_send = "<div  class='warning'> <span>Sorry message cannot be send. </span> <br> Please contact through <br> Phone: +977-9803928344 <br> OR <br> Email: santoshtmp7@gmail.com </div><br>"
+
       $(".msg_send").empty();
       $(".msg_send").append(return_msg_send);
       $("#msgModal").css({ "display": "block" });
-      var email_body_site_admin = "<div> santoshmagar.com.np Get In Touch Message : <p>First Name : " + inputFirstName + " </p>  <p>Last Name : " + inputLastName + " </p>  <p>Email : " + inputEmail + " </p>  <p>Phone Number : " + inputPhone + " </p>    <p>Message : " + inputMessage + " </p>     </div> ";
-      
+
     }
   });
 
@@ -91,23 +90,26 @@ $(document).ready(function () {
       var inputFirstName = $("#inputFirstName").val();
       var inputLastName = $("#inputLastName").val();
       var inputEmail = $("#inputEmail").val();
-      var inputPhone = $("#inputPhone").val();
       var inputMessage = $("#inputMessage").val();
-      var email_body_user = "<div>Dear " + inputFirstName + ", <br> </p>  Thanks for reaching out! <br> We'll contact you soon .. <p>Regards <br> <a href='https://santoshmagar.com.np'>santoshmagar.com.np</a></p></div> ";
-      
+
+      var email_body_message = "<div> santoshmagar.com.np Get In Touch Message : <p>First Name : " + inputFirstName + " </p>  <p>Last Name : " + inputLastName + " </p>  <p>Email : " + inputEmail + " </p> <p>Message : " + inputMessage + " </p>     </div> ";
+
       emailjs.init("JmqcuyKKtIViXdlgx");
       emailjs.send("service_yfntq1m", "template_criz1th", {
-        from_name: "visitor",
-        to_name: "admin",
-        message: "new message to you",
+        from_name: inputFirstName + " " + inputLastName,
+        to_name: "santoshmagar.com.np",
+        message: email_body_message,
         reply_to: "no-reply@santoshmagar.com.np",
       }).then(function (response) {
         console.log('SUCCESS!', response.status, response.text);
+        $('#contact-form')[0].reset();
+        $("#msgModal").css({ 'display': 'none' });
       }, function (error) {
         console.log('FAILED...', error);
+        $(".msg_send").append('<p> Message send failed.... <br> Please use other method to process. </p>');
+
       });
 
-      $("#msgModal").css({ 'display': 'none' });
       return false;
 
     }
