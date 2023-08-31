@@ -81,17 +81,7 @@ $(document).ready(function () {
       $(".msg_send").append(return_msg_send);
       $("#msgModal").css({ "display": "block" });
       var email_body_site_admin = "<div> santoshmagar.com.np Get In Touch Message : <p>First Name : " + inputFirstName + " </p>  <p>Last Name : " + inputLastName + " </p>  <p>Email : " + inputEmail + " </p>  <p>Phone Number : " + inputPhone + " </p>    <p>Message : " + inputMessage + " </p>     </div> ";
-
-      Email.send({
-        Host: host,
-        Username: uname,
-        Password: pp,
-        To: sendto,
-        From: from,
-        Subject: "santoshmagar.com.np Message",
-        Body: email_body_site_admin,
-      });
-
+      
     }
   });
 
@@ -104,15 +94,22 @@ $(document).ready(function () {
       var inputPhone = $("#inputPhone").val();
       var inputMessage = $("#inputMessage").val();
       var email_body_user = "<div>Dear " + inputFirstName + ", <br> </p>  Thanks for reaching out! <br> We'll contact you soon .. <p>Regards <br> <a href='https://santoshmagar.com.np'>santoshmagar.com.np</a></p></div> ";
-      Email.send({
-        Host: host,
-        Username: uname,
-        Password: pp,
-        To: inputEmail,
-        From: from,
-        Subject: "Thank you",
-        Body: email_body_user,
+      
+      emailjs.init("JmqcuyKKtIViXdlgx");
+      emailjs.send("service_yfntq1m", "template_criz1th", {
+        from_name: "visitor",
+        to_name: "admin",
+        message: "new message to you",
+        reply_to: "no-reply@santoshmagar.com.np",
+      }).then(function (response) {
+        console.log('SUCCESS!', response.status, response.text);
+      }, function (error) {
+        console.log('FAILED...', error);
       });
+
+      $("#msgModal").css({ 'display': 'none' });
+      return false;
+
     }
   });
 
@@ -120,8 +117,6 @@ $(document).ready(function () {
   $('#send_return').click(function () {
     $("#msgModal").css({ 'display': 'none' });
   });
-
-
 
 });
 
