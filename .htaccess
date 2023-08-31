@@ -13,6 +13,8 @@ RewriteBase /
 # ^ = start of string
 # [NC] = case insensitive search
 RewriteCond %{HTTP_REFERER} !^http://localhost/santoshmagar/ [NC]
+RewriteCond %{HTTP_REFERER} !^http://santoshmagar.local/ [NC]
+RewriteCond %{HTTP_REFERER} !^https://santoshmagar.com.np/ [NC]
  
 # \ = match any
 # . = any character
@@ -21,7 +23,7 @@ RewriteCond %{HTTP_REFERER} !^http://localhost/santoshmagar/ [NC]
 # [F] = forbidden, 403
 # [L] = stop processing further rules
 
-RewriteRule \.(gif|jpg|jpeg|png|svg|mp4|mov|mkv|flv|js)$ - [F,L]
+RewriteRule ^\.(gif|jpg|jpeg|png|svg|mp4|mov|mkv|flv|js)$ / [F,L]
 
 #Redirect 404 to Homepage
 ErrorDocument 404 /

@@ -73,12 +73,26 @@ $(document).ready(function () {
       var inputFirstName = $("#inputFirstName").val();
       var inputLastName = $("#inputLastName").val();
       var inputEmail = $("#inputEmail").val();
-      var inputPhone = $("#inputPhone").val();
       var inputMessage = $("#inputMessage").val();
       var return_msg_send = "<h5>Thank you for Getting In Touch.</h5><div> <p>First Name : " + inputFirstName + " </p>  <p>Last Name : " + inputLastName + " </p>  <p>Email : " + inputEmail + " </p> <p>Message : " + inputMessage + " </p></div> ";
 
-      $(".msg_send").empty();
-      $(".msg_send").append(return_msg_send);
+      emailjs.init("JmqcuyKKtIViXdlgx");
+      emailjs.send("service_yfntq1m", "template_criz1th", {
+        from_name: inputFirstName + " " + inputLastName,
+        to_name: "santoshmagar.com.np",
+        user_email: inputEmail,
+        message: inputMessage,
+        reply_to: "no-reply@santoshmagar.com.np",
+      }).then(function (response) {
+        console.log('SUCCESS!', response.status, response.text);
+        $(".msg_send").empty();
+        $(".msg_send").append(return_msg_send);
+        $('#contact-form')[0].reset();
+      }, function (error) {
+        $(".msg_send").empty();
+        $(".msg_send").append('<p style="color:red;"> Failed to send message.... <br> Please use other method to process. </p>');
+        console.log('FAILED...');
+      });
       $("#msgModal").css({ "display": "block" });
 
     }
@@ -86,35 +100,8 @@ $(document).ready(function () {
 
 
   $('#send_ok').click(function () {
-    if ($("#contact-form").valid()) {
-      var inputFirstName = $("#inputFirstName").val();
-      var inputLastName = $("#inputLastName").val();
-      var inputEmail = $("#inputEmail").val();
-      var inputMessage = $("#inputMessage").val();
-
-      var email_body_message = "<div> santoshmagar.com.np Get In Touch Message : <p>First Name : " + inputFirstName + " </p>  <p>Last Name : " + inputLastName + " </p>  <p>Email : " + inputEmail + " </p> <p>Message : " + inputMessage + " </p>     </div> ";
-
-      emailjs.init("JmqcuyKKtIViXdlgx");
-      emailjs.send("service_yfntq1m", "template_criz1th", {
-        from_name: inputFirstName + " " + inputLastName,
-        to_name: "santoshmagar.com.np",
-        message: email_body_message,
-        reply_to: "no-reply@santoshmagar.com.np",
-      }).then(function (response) {
-        console.log('SUCCESS!', response.status, response.text);
-        $('#contact-form')[0].reset();
-        $("#msgModal").css({ 'display': 'none' });
-      }, function (error) {
-        console.log('FAILED...', error);
-        $(".msg_send").append('<p> Message send failed.... <br> Please use other method to process. </p>');
-
-      });
-
-      return false;
-
-    }
+    $("#msgModal").css({ 'display': 'none' });
   });
-
 
   $('#send_return').click(function () {
     $("#msgModal").css({ 'display': 'none' });

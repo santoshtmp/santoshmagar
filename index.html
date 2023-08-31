@@ -27,7 +27,7 @@
 		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
 		crossorigin="anonymous"></script>
 	<!-- js send email -->
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script> 
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 	<!-- icon https://remixicon.com/ -->
 	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 	<!-- custooom css -->
@@ -539,12 +539,12 @@
 			</div>
 			<div id="msgModal" class="modal_popup">
 				<div class="modal_content_popup">
-					<!-- <span class="close_msgModal close_popup">&times;</span> -->
 					<div class="msg_send">
+						<div id="loader"></div>
 					</div>
 					<div>
-						<a href="/" class="btn_primary" id="send_ok"> OK</a>
-						<a href="#inquiry" class="btn_primary" id="send_return"> Return</a>
+						<!-- <a href="/" class="btn_primary" id="send_ok">Send</a> -->
+						<a href="#inquiry" class="btn_primary" id="send_return">Close</a>
 					</div>
 				</div>
 			</div>
