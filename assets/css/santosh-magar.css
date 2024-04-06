@@ -572,52 +572,17 @@ div.about-head:nth-child(2) {
 	color: #3298DB;
 }
 
-#portfolio .thumb {
-	background-color: #555;
-	overflow: hidden;
-	height: 152px;
-}
-
-#portfolio .thumb img {
-	width: 100%;
-	height: 100%;
-	opacity: 0.5;
-}
-
-#portfolio .thumb img:hover {
-	transform: scale(1.1);
-}
-
-#portfolio .details {
-	padding: 10px;
-}
-
-#portfolio .details a {
-	text-decoration: none;
-	display: inline-flex;
-}
-
 #portfolio .details h5 {
 	margin: 0px;
 	padding: 0px;
 	align-self: center;
 }
 
-
-/* #portfolio>div:nth-child(1)>div:nth-child(1) {
-	margin-bottom: 40px;
-	padding: inherit;
-} */
-
-.btn-cv {
-	margin-left: 30px;
-}
-
 .portfolio-list {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	gap: 10px;
+	gap: 30px;
 	margin-top: 24px;
 	margin-bottom: 24px;
 }
@@ -625,25 +590,68 @@ div.about-head:nth-child(2) {
 .portfolio-item {
 	display: flex;
 	flex-direction: column;
-	margin: 10px;
-	width: 200px;
-	aspect-ratio: 16 / 9;
+	flex: 0 0 22%;
 	background-color: white;
-	border: 3px white;
+	border-radius: 7px;
 	overflow: hidden;
-
+	box-shadow: 0 0 6px 6px rgb(171 171 171 / 15%);
+}
+.portfolio-item:hover{
+	box-shadow: 0 0 12px 12px rgb(72 72 72 / 15%);
 }
 
 .portfolio-item-thumb {
+	height: 130px;
+	cursor: pointer;
 	position: relative;
 }
 
-.portfolio-item a {
+.portfolio-item-thumb img {
+	height: 100%;
+	object-fit: cover;
+}
+.overlay{
+    position: absolute;
+	background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+}
+.portfolio-thumb-overlay {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	transition: .5s ease;
+	opacity: 0;
+	display: flex;
+}
+
+.portfolio-thumb-overlay:hover {
+	opacity: 1;
+}
+
+.portfolio-thumb-overlay p {
+	color: white;
+	font-size: 20px;
+	text-align: center;
+	font-weight: 600;
 	margin: auto;
+}
+
+.portfolio-item-title {
+	margin: auto;
+	padding: 16px 0;
+}
+
+.portfolio-item-title a {
 	text-decoration: none;
 	color: rgb(49, 48, 48);
 	font-weight: 600;
+	padding: 20px 0;
 }
+
+
 
 
 /*---------------- section :: contact content  ----------------------- */
@@ -871,6 +879,11 @@ footer .cc-footer {
 .btn_primary:hover {
 	background-color: #3298DB;
 	color: white;
+}
+
+.btn-cv {
+	margin-left: 30px;
+	text-decoration: none;
 }
 
 /*--------------------------------*/
