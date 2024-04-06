@@ -378,6 +378,7 @@ div.about-head:nth-child(2) {
 	padding: 10px 10px 10px 0;
 }
 
+
 .experience-collection-col-1 {
 	display: flex;
 	flex-direction: column;
@@ -554,9 +555,13 @@ div.about-head:nth-child(2) {
 }
 
 /*---------------- section :: portfolio ----------------------- */
+#portfolio-page #portfolio {
+	padding: 150px 0;
+}
 
 #portfolio {
-	padding-top: 100px;
+	padding: 100px 0;
+	background-color: #b4ddef9e;
 }
 
 #portfolio h2 {
@@ -598,38 +603,48 @@ div.about-head:nth-child(2) {
 	align-self: center;
 }
 
-#other-info p {
-	padding: 10px;
-	text-align: center;
-	text-decoration: underline;
-}
 
-.ri-arrow-right-fill,
-.ri-error-warning-fill {
-	font-size: 32px;
-	margin-left: 10px;
-}
-
-.info-load>div {
-	display: flex;
-}
-
-.info-load>div p {
-	margin-left: auto;
-}
-
-.ri-error-warning-fill {
-	margin-right: auto;
-}
-
-#portfolio>div:nth-child(1)>div:nth-child(1) {
+/* #portfolio>div:nth-child(1)>div:nth-child(1) {
 	margin-bottom: 40px;
 	padding: inherit;
+} */
+
+.btn-cv {
+	margin-left: 30px;
 }
 
-#portfolio ol li {
-	list-style: number;
+.portfolio-list {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin-top: 24px;
+	margin-bottom: 24px;
 }
+
+.portfolio-item {
+	display: flex;
+	flex-direction: column;
+	margin: 10px;
+	width: 200px;
+	aspect-ratio: 16 / 9;
+	background-color: white;
+	border: 3px white;
+	overflow: hidden;
+
+}
+
+.portfolio-item-thumb {
+	position: relative;
+}
+
+.portfolio-item a {
+	margin: auto;
+	text-decoration: none;
+	color: rgb(49, 48, 48);
+	font-weight: 600;
+}
+
 
 /*---------------- section :: contact content  ----------------------- */
 #contact {
@@ -975,9 +990,15 @@ footer .cc-footer {
 	.bg-1 {
 		left: 40px
 	}
+
+	.myexperience .experience-collection {
+		flex-direction: column;
+	}
+
+	.skills-collection {
+		grid-template-columns: auto
+	}
 }
-
-
 
 /* #portfolio > div:nth-child(1) > div:nth-child(2) {
 	display: none;

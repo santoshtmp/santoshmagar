@@ -4,7 +4,7 @@ let logos = ['logo-stmp-001.png', 'logo-stmp-002.png', 'logo-stmp-003.png', 'log
 var x = -1;
 setInterval(function () {
   x = (x === logos.length - 1) ? 0 : x + 1;
-  site_logo.src = 'assets/images/'.concat(logos[x])
+  site_logo.src = '/assets/images/'.concat(logos[x])
 }, 2000);
 
 
@@ -20,18 +20,6 @@ $(".header-nav").each(function () {
 
 $(".ham-list li").click(function () {
   $(".ham-list").addClass("ham-hide");
-});
-
-// ---------------------click: load more -------------------------------
-
-$("#btn_load_more").click(function () {
-  var html_content = '<div> <p> No More Data ... comming soon ...</p>  <i class="ri-error-warning-fill"></i>  </div>';
-  var check = $('.info-load');
-  if (check.length == 0) {
-    $("#other-info").append(html_content);
-  }
-  $('#other-info').addClass('info-load');
-  $(this).hide();
 });
 
 // ------------------------click show info_hide---------------------------------------
