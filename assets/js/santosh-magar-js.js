@@ -97,4 +97,24 @@ $(document).ready(function () {
 
 });
 
-// -------------------------------------------------------------------------------------------------------------------------
+// ---------------------- portfolio section -------------------------------------------
+$('.portfolio-item').on('click', function (e) {
+  e.stopPropagation();
+  var detail = $(this).find('.portfolio-item-detail');
+  if (detail.length) {
+    detail.toggleClass("hide")
+    if ($(this).find('.portfolio-item-detail').hasClass("hide")) {
+      $("body").css('overflow', "");
+    } else {
+      $("body").css('overflow', "hidden");
+    }
+  } else {
+    var href = $(this).find('a').attr("href");
+    window.open(href, '_blank');
+  }
+});
+$('.portfolio-item-detail .detail').on('click', function (e) {
+  e.stopPropagation();
+})
+// -------------------------------------------------------------------------------------
+
