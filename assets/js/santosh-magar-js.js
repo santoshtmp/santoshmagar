@@ -112,6 +112,7 @@ $('.portfolio-item').on('click', function (e) {
     var href = $(this).find('a').attr("href");
     window.open(href, '_blank');
   }
+  return false;
 });
 $('.portfolio-item-detail .detail').on('click', function (e) {
   e.stopPropagation();
