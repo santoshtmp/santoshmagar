@@ -117,5 +117,43 @@ $('.portfolio-item').on('click', function (e) {
 $('.portfolio-item-detail .detail').on('click', function (e) {
   e.stopPropagation();
 })
+
+// ----------------------- portfolio filter -------------------------
+
+
+// form submit
+$(document).on('submit', '#portfolio-filter', function (e) {
+  e.stopPropagation();
+  e.preventDefault();
+  var portfolio_type_selected = $('#portfolio-filter input[type="radio"][name="type"]:checked').val();
+  if (portfolio_type_selected == 'all') {
+    $('.portfolio-list .portfolio-item').show();
+  } else {
+    portfolio_type_selected = (portfolio_type_selected == 'other') ? ' other' : portfolio_type_selected;
+    portfolio_type_selected = portfolio_type_selected.split(' ');
+    $('.portfolio-list .portfolio-item').each(function () {
+      let current_portfolio = $(this);
+      let portfolio_type = current_portfolio.attr('types').split(' ');
+      let isPresent = portfolio_type_selected.some(value => portfolio_type.includes(value));
+      if (isPresent) {
+        current_portfolio.show();
+      } else {
+        current_portfolio.hide();
+      }
+    });
+  }
+  return false;
+});
+
+
+// on change in filter item make form submit
+$(document).on(
+  'change',
+  '#portfolio-filter input[type="checkbox"], #portfolio-filter input[type="radio"]',
+  function () {
+    $('#portfolio-filter').trigger('submit');
+  }
+);
+
 // -------------------------------------------------------------------------------------
 

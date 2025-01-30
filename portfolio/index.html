@@ -6,7 +6,7 @@
 		<meta name="description"
 			content="Develop PHP web application, experience PHP MOODLE, WordPress. Customize plugin and theme with both backend and frontend">
 		<meta name="keywords"
-			content="santosh magar, santoshtmp, PHP, MOODLE ,WordPress ,LMS , Web developer">
+			content="santosh magar, santoshtmp, PHP, MOODLE, WordPress, Plugin, LMS, Web developer">
 		<meta name="author" content="santoshmagar.com.np">
 		<meta name="viewport"
 			content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
@@ -99,18 +99,45 @@
 		<!-- ----------portfolio  content---------- -->
 		<section id="portfolio">
 			<div class="container">
-				<div class="portfolio-head" style="display: flex;">
-					<h2>Portfolio</h2>
-					<a class="btn_primary btn-cv" id="download_cv_1"
-						href="/assets/files/cv-santosh.pdf" download> Download CV <i
-							class="ri-file-download-line"></i> </a>
+				<div class="portfolio-head">
+					<div class="portfolio-header">
+						<h2>Portfolio</h2>
+						<a class="btn_primary btn-cv" id="download_cv_1"
+							href="/assets/files/cv-santosh.pdf" download> Download CV <i
+								class="ri-file-download-line"></i> </a>
+					</div>
+					<div class="filter-form">
+						<form action="/portfolio" method="get" class="portfolio-filter"
+							id="portfolio-filter">
+							<div class="field-wrapper">
+								<input type="radio" name="type" id="type-all" value="all" checked>
+								<label for="type-all">All</label>
+							</div>
+							<div class="field-wrapper">
+								<input type="radio" name="type" id="type-moodle" value="moodle">
+								<label for="type-moodle">MOODLE</label>
+							</div>
+							<div class="field-wrapper">
+								<input type="radio" name="type" id="type-wordpress" value="wordpress">
+								<label for="type-wordpress">WordPress</label>
+							</div>
+							<div class="field-wrapper">
+								<input type="radio" name="type" id="type-other" value="other">
+								<label for="type-other">Other</label>
+							</div>
+						</form>
+					</div>
 				</div>
 
 				<div class="portfolio-list">
-					<div class="portfolio-item">
+					<!-- freelance portfolio -->
+					<div class="portfolio-item" types>
 						<div class="portfolio-item-thumb">
-							<img src="/assets/images/portfolio/default.png" alt>
+							<img src="/assets/images/portfolio/default.png" alt="img" loading="lazy">
 							<div class="portfolio-thumb-overlay"><p>Explore</p></div>
+							<div class="portfolio-tags">
+								<span class="tag freelance">Freelance</span>
+							</div>
 						</div>
 						<div class="portfolio-item-title">
 							<a href="https://www.fiverr.com/santoshtmp" target="_blank">
@@ -138,10 +165,263 @@
 							</div>
 						</div>
 					</div>
-					<div class="portfolio-item">
+					<!--  wtpoker portfolio  -->
+					<div class="portfolio-item" types="moodle">
+						<div class="portfolio-item-thumb">
+							<img src="/assets/images/portfolio/wtpoker.png" alt="img" loading="lazy">
+							<div class="portfolio-thumb-overlay"><p>Explore</p></div>
+							<div class="portfolio-tags">
+								<span class="tag moodle">MOODLE</span>
+							</div>
+						</div>
+						<div class="portfolio-item-title">
+							<a href="https://academy.staging.pokerwt.com/" target="_blank">
+								WTPoker LMS
+							</a>
+						</div>
+					</div>
+					<!-- servir portfolio -->
+					<div class="portfolio-item" types="wordpress">
+						<div class="portfolio-item-thumb">
+							<img src="/assets/images/portfolio/servir-hkh.png" alt="img"
+								loading="lazy">
+							<div class="portfolio-thumb-overlay"><p>Explore</p></div>
+							<div class="portfolio-tags">
+								<span class="tag wordpress">WordPress</span>
+							</div>
+						</div>
+						<div class="portfolio-item-title">
+							<a href="#servir-site-url" target="_blank">
+								Servir HKH
+							</a>
+						</div>
+					</div>
+					<!-- pngrh portfolio -->
+					<div class="portfolio-item" types="wordpress">
+						<div class="portfolio-item-thumb">
+							<img src="/assets/images/portfolio/pngrh.png" alt="img" loading="lazy">
+							<div class="portfolio-thumb-overlay"><p>Explore</p></div>
+							<div class="portfolio-tags">
+								<span class="tag wordpress">WordPress</span>
+							</div>
+						</div>
+						<div class="portfolio-item-title">
+							<a href="https://pngresourcegovernancehub.org/" target="_blank">
+								PNG resources Hub
+							</a>
+						</div>
+						<div class="portfolio-item-detail hide">
+							<div class="container">
+								<div class="close">X</div>
+								<div class="detail">
+									<div class="portfolio-detail-title">
+										<a href="https://pngresourcegovernancehub.org/" target="_blank">
+											PNG resources Hub
+										</a>
+									</div>
+									<div class="portfolio-detail-content">
+										<p>The Papua New Guinea Resource Governance Hub is the platform for
+											publishing the document
+											resources. In this project, I got an opportunity to develop the
+											WordPress CMS platform. Here I
+											developed a WordPress theme from scratch to display and manage the
+											content. I also integrated the
+											Elastic Searh for resource fiter and Mapbox to visually represent the
+											resource project location based on latitude and longitude.</p>
+										<ul>
+											<li>Programming Languages: PHP, HTML, SCSS, Javascript, jQuery</li>
+											<li>Tools: Vs code, Gitlab, Postman</li>
+											<li>Technologies: MySQL, WordPress, Map Box</li>
+											<li>Key Responsibilities:
+												<ul>
+													<li>Develop WP thme from scratch.</li>
+													<li>Develop a document resources search filter for the PNG
+														resources.</li>
+													<li>Customize the map box to display the resource project area
+														point.</li>
+													<li>Developed REST APIs for "PNG resources Hub" WordPress
+														site.</li>
+													<li>"PNG resources Hub" WordPress site optimized.</li>
+												</ul>
+											</li>
+										</ul>
+										<p>
+											Visit the site
+											<a href="https://pngresourcegovernancehub.org/"
+												target="_blank"
+												rel="noopener noreferrer">
+												https://pngresourcegovernancehub.org/
+											</a>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- csf search filter wp plugin portfolio  -->
+					<div class="portfolio-item" types="wordpress other">
+						<div class="portfolio-item-thumb">
+							<img src="/assets/images/portfolio/csf-search-filter.png" alt="img"
+								loading="lazy">
+							<div class="portfolio-thumb-overlay"><p>Explore</p></div>
+							<div class="portfolio-tags">
+								<span class="tag plugin">Plugin</span>
+								<span class="tag wordpress">WordPress</span>
+							</div>
+						</div>
+						<div class="portfolio-item-title">
+							<a href="https://github.com/santoshtmp/csf-search-filter"
+								target="_blank">
+								WP - Search Filter Plugin
+							</a>
+						</div>
+					</div>
+					<!-- himalayanre portfolio -->
+					<div class="portfolio-item" types="wordpress">
+						<div class="portfolio-item-thumb">
+							<img src="/assets/images/portfolio/himalayanre.png" alt="img"
+								loading="lazy">
+							<div class="portfolio-thumb-overlay"><p>Explore</p></div>
+							<div class="portfolio-tags">
+								<span class="tag wordpress">WordPress</span>
+							</div>
+						</div>
+						<div class="portfolio-item-title">
+							<a href="https://himalayanre.yipl.net/" target="_blank">
+								Himalayan-Re
+							</a>
+						</div>
+						<div class="portfolio-item-detail hide">
+							<div class="container">
+								<div class="close">X</div>
+								<div class="detail">
+									<div class="portfolio-detail-title">
+										<a href="https://himalayanre.yipl.net/" target="_blank">
+											Himalayan-Re
+										</a>
+									</div>
+									<div class="portfolio-detail-content">
+										<ul>
+											<li>Developed REST APIs for Himalayan-Re WordPress site.</li>
+										</ul>
+										<p> Visit the site <a href="https://himalayanre.yipl.net/"
+												target="_blank"
+												rel="noopener noreferrer">https://himalayanre.yipl.net/</a></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- post title required wp plugin portfolio -->
+					<div class="portfolio-item" types="wordpress other">
 						<div class="portfolio-item-thumb">
 							<div class="overlay"></div>
 							<div class="portfolio-thumb-overlay"><p>Explore</p></div>
+							<div class="portfolio-tags">
+								<span class="tag plugin">Plugin</span>
+								<span class="tag wordpress">WordPress</span>
+							</div>
+						</div>
+						<div class="portfolio-item-title">
+							<a href="https://github.com/santoshtmp/post-title-required"
+								target="_blank">
+								WP - Post Title Required Plugin
+							</a>
+						</div>
+					</div>
+					<!-- seap portfolio -->
+					<div class="portfolio-item" types="wordpress">
+						<div class="portfolio-item-thumb">
+							<img src="/assets/images/portfolio/seap-nfa.png" alt="img"
+								loading="lazy">
+							<div class="portfolio-thumb-overlay"><p>Explore</p></div>
+							<div class="portfolio-tags">
+								<span class="tag wordpress">WordPress</span>
+							</div>
+						</div>
+						<div class="portfolio-item-title">
+							<a href="https://seap.nationalityforall.org/" target="_blank">
+								SEAP NFA
+							</a>
+						</div>
+						<div class="portfolio-item-detail hide">
+							<div class="container">
+								<div class="close">X</div>
+								<div class="detail">
+									<div class="portfolio-detail-title">
+										<a href="https://seap.nationalityforall.org/" target="_blank">
+											SEAP NFA
+										</a>
+									</div>
+									<div class="portfolio-detail-content">
+										<p>
+											SEAP stands for Statelessness Encyclopedia Asia Pacific. It is a
+											report of over two years of research
+											and consultations on Asia Pacific’s statelessness by Nationality for
+											All (NFA). In this project, I got an
+											opportunity to develop the WordPress CMS platform. Here I developed
+											the WordPress theme from
+											scratch to manage and display the site content. Also, I integrated
+											the apex chart and displayed the
+											countries' flags based on flag cdn.
+										</p>
+										<ul>
+											<li>Programming Languages: PHP, HTML, SCSS, Javascript, jQuery</li>
+											<li>Tools: Vs code, Gitlab</li>
+											<li>Technologies: MySQL, WordPress, Flag cdn, Apex charts, Data
+												Table</li>
+											<li>Key Responsibilities:
+												<ul>
+													<li>Develop WP thme from scratch as required.</li>
+													<li>Develop SEAP stakeholder filter page process.</li>
+													<li>Develop the feature to compare countries based on their
+														metadata like law,
+														population, and Cause of Statelessness.</li>
+													<li>Developed REST APIs for "SEAP NFA" WordPress
+														site.</li>
+													<li>"SEAP NFA" WordPress site optimized.</li>
+												</ul>
+											</li>
+										</ul>
+										<p> Visit the site
+											<a href="https://seap.nationalityforall.org/"
+												target="_blank"
+												rel="noopener noreferrer">
+												https://seap.nationalityforall.org/
+											</a>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- moodle-local_easycustmenu plugin portfolio  -->
+					<div class="portfolio-item" types="moodle other">
+						<div class="portfolio-item-thumb">
+							<img src="/assets/images/portfolio/moodle-plugin-ecm.png" alt="img"
+								loading="lazy">
+							<div class="portfolio-thumb-overlay"><p>Explore</p></div>
+							<div class="portfolio-tags">
+								<span class="tag plugin">Plugin</span>
+								<span class="tag moodle">MOODLE</span>
+							</div>
+						</div>
+						<div class="portfolio-item-title">
+							<a href="https://github.com/santoshtmp/moodle-local_easycustmenu"
+								target="_blank">
+								moodle-local_easycustmenu
+							</a>
+						</div>
+					</div>
+					<!--  skillab csc portfolio  -->
+					<div class="portfolio-item" types="moodle">
+						<div class="portfolio-item-thumb">
+							<img src="/assets/images/portfolio/csc-skilllab.png" alt="img"
+								loading="lazy">
+							<div class="portfolio-thumb-overlay"><p>Explore</p></div>
+							<div class="portfolio-tags">
+								<span class="tag moodle">MOODLE</span>
+							</div>
 						</div>
 						<div class="portfolio-item-title">
 							<a href="https://courses.careerservicelab.com/" target="_blank">
@@ -160,14 +440,38 @@
 										</div>
 									</div>
 									<div class="portfolio-detail-content">
+										<p>
+											This CSC LMS was developed by the Career Service Lab. In this
+											project, I got an opportunity to
+											develop the LMS platform. Here I developed a Moodle theme from
+											scratch with the feature t o
+											integrate into its main Laravel CSC site through REST APIs.
+										</p>
 										<ul>
-											<li>Developed custom theme and plugin from scratch.</li>
-											<li>Developed REST APIs for LMS to maintain tracking and
-												reporting.</li>
-											<li>Login and sing up through <a
-													href="https://careerservicelab.com/">https://careerservicelab.com/</a>
-												main site API.</li>
-											<li>Developed the moodle clean routing for custom pages</li>
+											<li>Programming Languages: PHP, HTML, SCSS, Javascript, jQuery</li>
+											<li>Tools: Vs code, Gitlab, Postman</li>
+											<li>Technologies: MySQL, MOODLE, Mustache</li>
+											<li>Key Responsibilities:
+												<ul>
+													<li>Develop Moodle APIs for external applications which is csc main
+														site.</li>
+													<li>Implement CSC main site APIs into Moodle site for login and
+														user crud.</li>
+													<li>Restrict direct access to Moodle LMS, as users need to log in
+														and access through the CSC platform.</li>
+													<li>Restrict access to LMS quiz activity only to 3 times in a day.
+														So that the user can review and come back to take a quiz after
+														they are ready.</li>
+													<li>Apply the condition in a course that after the user completes a
+														course user can receive the course certificate and only view the
+														course content.</li>
+													<li>Developed the course list report with defined filters. Also
+														pass these report information to laravel csc sites through
+														APIs.</li>
+													<li>Track the user course progress and the user time spent in a
+														course.</li>
+												</ul>
+											</li>
 										</ul>
 										<p> Visit the site <a href="https://courses.careerservicelab.com/"
 												target="_blank"
@@ -177,10 +481,15 @@
 							</div>
 						</div>
 					</div>
-					<div class="portfolio-item">
+					<!-- muan portfolio -->
+					<div class="portfolio-item" types="wordpress">
 						<div class="portfolio-item-thumb">
-							<img src="/assets/images/portfolio/muan-kmp.png" alt="img">
+							<img src="/assets/images/portfolio/muan-kmp.png" alt="img"
+								loading="lazy">
 							<div class="portfolio-thumb-overlay"><p>Explore</p></div>
+							<div class="portfolio-tags">
+								<span class="tag wordpress">WordPress</span>
+							</div>
 						</div>
 						<div class="portfolio-item-title">
 							<a href="https://muannepal.org.np/kmp/" target="_blank">
@@ -209,10 +518,14 @@
 							</div>
 						</div>
 					</div>
-					<div class="portfolio-item">
+					<!-- wplus portfolio -->
+					<div class="portfolio-item" types="moodle">
 						<div class="portfolio-item-thumb">
-							<img src="/assets/images/portfolio/wplus.png" alt="img">
+							<img src="/assets/images/portfolio/wplus.png" alt="img" loading="lazy">
 							<div class="portfolio-thumb-overlay"><p>Explore</p></div>
+							<div class="portfolio-tags">
+								<span class="tag moodle">MOODLE</span>
+							</div>
 						</div>
 						<div class="portfolio-item-title">
 							<a href="https://course.wplus.org/" target="_blank">Wplus LMS</a>
@@ -227,6 +540,13 @@
 										</div>
 									</div>
 									<div class="portfolio-detail-content">
+										<p>This online course was developed by WOCAN to provide an in-depth
+											understanding of the
+											application of the W+ Standard. In this project, I got an opportunity
+											to develop the LMS platform.
+											Here I developed a Moodle theme from scratch to display and manage
+											the content. I also integrated
+											the PayPal payment for the course enrollment.</p>
 										<ul>
 											<li>Developed custom theme and plugin from scratch.</li>
 											<li>Integrate PayPal Enrollment method</li>
@@ -238,20 +558,28 @@
 							</div>
 						</div>
 					</div>
-					<div class="portfolio-item">
+					<!--  nmwws np portfolio -->
+					<div class="portfolio-item" types="wordpress">
 						<div class="portfolio-item-thumb">
-							<img src="/assets/images/portfolio/nmwws.png" alt="img">
+							<img src="/assets/images/portfolio/nmwws.png" alt="img" loading="lazy">
 							<div class="portfolio-thumb-overlay"><p>Explore</p></div>
+							<div class="portfolio-tags">
+								<span class="tag wordpress">WordPress</span>
+							</div>
 						</div>
 						<div class="portfolio-item-title">
 							<a href="https://nmwws.org.np/" target="_blank">NMWWS NP</a>
 						</div>
 					</div>
-					<div class="portfolio-item">
+					<!-- osc portfolio -->
+					<div class="portfolio-item" types="wordpress">
 						<div class="portfolio-item-thumb">
-							<img src="/assets/images/portfolio/osc.png" alt="img">
+							<img src="/assets/images/portfolio/osc.png" alt="img" loading="lazy">
 							<div
 								class="portfolio-thumb-overlay"><p>Explore</p>
+							</div>
+							<div class="portfolio-tags">
+								<span class="tag wordpress">WordPress</span>
 							</div>
 						</div>
 						<div class="portfolio-item-title">
@@ -273,10 +601,15 @@
 							</div>
 						</div>
 					</div>
-					<div class="portfolio-item">
+					<!--  eelms portfolio -->
+					<div class="portfolio-item" types="moodle">
 						<div class="portfolio-item-thumb">
 							<div class="portfolio-thumb-overlay"><p>Explore</p></div>
-							<img src="/assets/images/portfolio/eelms-home.png" alt="img">
+							<img src="/assets/images/portfolio/eelms-home.png" alt="img"
+								loading="lazy">
+							<div class="portfolio-tags">
+								<span class="tag moodle">MOODLE</span>
+							</div>
 						</div>
 						<div class="portfolio-item-title">
 							<a href="https://eelms-ces.ioe.edu.np/" target="_blank">
@@ -284,10 +617,14 @@
 							</a>
 						</div>
 					</div>
-					<div class="portfolio-item">
+					<!-- ndrrma portfolio -->
+					<div class="portfolio-item" types="moodle">
 						<div class="portfolio-item-thumb">
-							<img src="/assets/images/portfolio/ndrrma.png" alt="img">
+							<img src="/assets/images/portfolio/ndrrma.png" alt="img" loading="lazy">
 							<div class="portfolio-thumb-overlay"><p>Explore</p></div>
+							<div class="portfolio-tags">
+								<span class="tag moodle">MOODLE</span>
+							</div>
 						</div>
 						<div class="portfolio-item-title">
 							<a href="https://elearning.ndrrma.gov.np/" target="_blank">
@@ -295,10 +632,14 @@
 							</a>
 						</div>
 					</div>
-					<div class="portfolio-item">
+					<!-- ia portfolio -->
+					<div class="portfolio-item" types="moodle">
 						<div class="portfolio-item-thumb">
-							<img src="/assets/images/portfolio/ia.png" alt="img">
+							<img src="/assets/images/portfolio/ia.png" alt="img" loading="lazy">
 							<div class="portfolio-thumb-overlay"><p>Explore</p></div>
+							<div class="portfolio-tags">
+								<span class="tag moodle">MOODLE</span>
+							</div>
 						</div>
 						<div class="portfolio-item-title">
 							<a href="https://elearnptco.koshi.gov.np/" target="_blank">
@@ -323,10 +664,15 @@
 							</div>
 						</div>
 					</div>
-					<div class="portfolio-item">
+					<!-- chimpvine np  portfolio -->
+					<div class="portfolio-item" types="moodle">
 						<div class="portfolio-item-thumb">
-							<img src="/assets/images/portfolio/chimpvine-home.png" alt="img">
+							<img src="/assets/images/portfolio/chimpvine-home.png" alt="img"
+								loading="lazy">
 							<div class="portfolio-thumb-overlay"><p>Explore</p></div>
+							<div class="portfolio-tags">
+								<span class="tag moodle">MOODLE</span>
+							</div>
 						</div>
 						<div class="portfolio-item-title">
 							<a href="https://np.chimpvine.com/" target="_blank">
@@ -334,9 +680,11 @@
 							</a>
 						</div>
 					</div>
-					<div class="portfolio-item">
+					<!-- ausadipasal  portfolio -->
+					<div class="portfolio-item" types="other">
 						<div class="portfolio-item-thumb">
-							<img src="/assets/images/portfolio/medismart-ausadipasal.png" alt="img">
+							<img src="/assets/images/portfolio/medismart-ausadipasal.png" alt="img"
+								loading="lazy">
 							<div class="portfolio-thumb-overlay"><p>Explore</p></div>
 						</div>
 						<div class="portfolio-item-title">
@@ -344,10 +692,14 @@
 								target="_blank">Ausadipasal github</a>
 						</div>
 					</div>
-					<div class="portfolio-item">
+					<!-- nasc lms portfolio -->
+					<div class="portfolio-item" types="moodle">
 						<div class="portfolio-item-thumb">
 							<div class="overlay"></div>
 							<div class="portfolio-thumb-overlay"><p>Explore</p></div>
+							<div class="portfolio-tags">
+								<span class="tag moodle">MOODLE</span>
+							</div>
 						</div>
 						<div class="portfolio-item-title">
 							<a href="http://202.166.212.153/" target="_blank">NASC LMS</a>

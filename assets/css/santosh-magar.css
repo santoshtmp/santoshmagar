@@ -565,6 +565,25 @@ div.about-head:nth-child(2) {
 	padding: 150px 0;
 }
 
+.portfolio-head,
+.portfolio-header {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 6px;
+}
+
+form.portfolio-filter {
+	display: flex;
+	flex-wrap: wrap;
+}
+form.portfolio-filter .field-wrapper {
+	padding: 0 7px;
+}
+form.portfolio-filter .field-wrapper label {
+	cursor: pointer;
+}
+
 #portfolio {
 	padding: 100px 0;
 	background-color: #b4ddef9e;
@@ -586,7 +605,7 @@ div.about-head:nth-child(2) {
 
 .portfolio-list {
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-start;
 	flex-direction: row;
 	flex-wrap: wrap;
 	gap: 24px;
@@ -654,6 +673,20 @@ div.about-head:nth-child(2) {
 	margin: auto;
 }
 
+.portfolio-tags {
+	position: absolute;
+	bottom: 0;
+	margin: 9px;
+}
+
+.portfolio-tags .tag{
+	padding: 7px;
+	background-color: #7fb2d4;
+	border-radius: 4px;
+	font-size: 12px;
+	font-weight: 600;
+}
+
 .portfolio-item-title {
 	margin: 0 auto;
 	padding: 16px 0;
@@ -674,6 +707,9 @@ div.about-head:nth-child(2) {
 	width: 100%;
 	height: 100%;
 	z-index: 99;
+}
+.portfolio-item-detail ul li{
+	list-style: decimal-leading-zero;
 }
 
 .portfolio-item-detail .container {
@@ -701,8 +737,8 @@ div.about-head:nth-child(2) {
 .portfolio-detail-title a {
 	text-decoration: none;
 	font-weight: 600;
-    font-size: 18px;
-    color: #303030;
+	font-size: 18px;
+	color: #303030;
 }
 
 .portfolio-detail-content {
