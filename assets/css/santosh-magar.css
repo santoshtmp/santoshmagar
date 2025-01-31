@@ -577,9 +577,11 @@ form.portfolio-filter {
 	display: flex;
 	flex-wrap: wrap;
 }
+
 form.portfolio-filter .field-wrapper {
 	padding: 0 7px;
 }
+
 form.portfolio-filter .field-wrapper label {
 	cursor: pointer;
 }
@@ -679,7 +681,7 @@ form.portfolio-filter .field-wrapper label {
 	margin: 9px;
 }
 
-.portfolio-tags .tag{
+.portfolio-tags .tag {
 	padding: 7px;
 	background-color: #7fb2d4;
 	border-radius: 4px;
@@ -689,7 +691,7 @@ form.portfolio-filter .field-wrapper label {
 
 .portfolio-item-title {
 	margin: 0 auto;
-	padding: 16px 0;
+	padding: 12px 9px;
 }
 
 .portfolio-item-title a {
@@ -708,7 +710,8 @@ form.portfolio-filter .field-wrapper label {
 	height: 100%;
 	z-index: 99;
 }
-.portfolio-item-detail ul li{
+
+.portfolio-item-detail ul li {
 	list-style: decimal-leading-zero;
 }
 
@@ -722,16 +725,22 @@ form.portfolio-filter .field-wrapper label {
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
-	margin: auto;
-	margin-top: 100px;
+	margin: 3rem auto auto auto;
 	padding: 24px;
+	max-height: 90vh;
+}
+
+.portfolio-detail-content {
+	margin-top: 12px;
+	max-height: 87vh;
+	overflow-y: auto;
 }
 
 .portfolio-item-detail .close {
 	cursor: pointer;
 	color: white;
 	opacity: 1;
-	margin-top: 70px;
+	margin-top: 2rem;
 }
 
 .portfolio-detail-title a {
@@ -741,9 +750,6 @@ form.portfolio-filter .field-wrapper label {
 	color: #303030;
 }
 
-.portfolio-detail-content {
-	margin-top: 12px;
-}
 
 @media screen and (max-width: 990px) {
 	.portfolio-item {

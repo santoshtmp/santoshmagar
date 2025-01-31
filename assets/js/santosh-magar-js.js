@@ -110,7 +110,9 @@ $('.portfolio-item').on('click', function (e) {
     }
   } else {
     var href = $(this).find('a').attr("href");
-    window.open(href, '_blank');
+    if (href != '#' && href != '') {
+      window.open(href, '_blank');
+    }
   }
   return false;
 });
