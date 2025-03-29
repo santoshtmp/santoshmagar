@@ -159,3 +159,29 @@ $(document).on(
 
 // -------------------------------------------------------------------------------------
 
+let medium_posts_section = document.getElementById('medium-posts');
+if (medium_posts_section) {
+  fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@santoshtmp7')
+    .then(response => response.json())
+    .then(data => {
+      let postsHTML = '';
+      data.items.slice(0, 5).forEach(post => {
+        // Extract thumbnail from content
+        let imgMatch = post.content.match(/<img.*?src="(.*?)"/);
+        let imgSrc = imgMatch ? imgMatch[1] : 'https://via.placeholder.com/120x80'; // Fallback
+
+        postsHTML += `
+						<a href="${post.link}" target="_blank" class="post">
+							<div class="post-content">
+								<h3>${post.title}</h3>
+								<p>${post.description.replace(/<\/?[^>]+(>|$)/g, "").substring(0, 100)}...</p>
+							</div>
+							<img src="${imgSrc}" alt="Post Image">
+						</a>
+					`;
+      });
+      postsHTML += '<div class="view-all-blogs"><a href="https://medium.com/@santoshtmp7" target="_blank" class="view-all-blog-btn" rel="noopener noreferrer">View all blogs</a></div>';
+      medium_posts_section.innerHTML = postsHTML;
+    });
+}
+// -------------------------------------------------------------------------------------

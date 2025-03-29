@@ -293,7 +293,7 @@ div.about-head:nth-child(2) {
 }
 
 .about-head h2 {
-	font-size: 2.0588235294118rem;
+	font-size: 2rem;
 	font-weight: bold;
 	font-family: 'Playfair Display', serif;
 	line-height: 1.2;
@@ -592,11 +592,12 @@ form.portfolio-filter .field-wrapper label {
 }
 
 #portfolio h2 {
-	font-size: 2.0588235294118rem;
+	font-size: 2rem;
 	font-weight: bold;
 	font-family: 'Playfair Display', serif;
 	line-height: 1.2;
 	color: #2f2f2f;
+	padding-left: 15px;
 }
 
 #portfolio .details h5 {
@@ -1001,6 +1002,76 @@ footer .cc-footer {
 	margin-left: 30px;
 	text-decoration: none;
 }
+
+/* -------------- blogs - medium ----------------- */
+#blog-section {
+	padding: 100px 0;
+}
+
+#blog-section h2 {
+	font-size: 2rem;
+	font-weight: 700;
+	font-family: 'Playfair Display', serif;
+	line-height: 1.2;
+	color: #2f2f2f;
+	padding-left: 15px;
+}
+
+#medium-posts {
+	gap: 17px;
+	display: flex;
+	flex-direction: column;
+}
+
+#medium-posts .post {
+	display: flex;
+	border-bottom: 1px solid #ddd;
+	padding: 15px 0;
+}
+
+#medium-posts .post img {
+	width: 120px;
+	height: 80px;
+	margin-left: 15px;
+	object-fit: cover;
+}
+
+#medium-posts .post-content {
+	flex: 1;
+}
+
+#medium-posts .post h3 {
+	font-size: 18px;
+	margin: 0;
+}
+
+#medium-posts .post p {
+	color: #555;
+	margin: 5px 0;
+}
+
+#medium-posts a {
+	text-decoration: none;
+}
+
+#medium-posts .view-all-blogs {
+	display: flex;
+	margin: auto;
+}
+
+#medium-posts .view-all-blog-btn {
+	text-align: center;
+	text-decoration: none;
+	border: 1px solid #007bff;
+	border-radius: 4px;
+	padding: 7px;
+}
+
+#medium-posts .view-all-blog-btn:hover {
+	color: white;
+	background-color: #007bff;
+}
+
 
 /*--------------------------------*/
 @media only screen and (max-width: 990px) {
