@@ -38,6 +38,32 @@ document.addEventListener('DOMContentLoaded', function() {
         direction: 'horizontal',
         loop: true,
 
+        // Centered slides
+        centeredSlides: true,
+
+        // Slides per view
+        slidesPerView: 1.2, // Show 1.2 slides on mobile initially
+        spaceBetween: 20,
+
+        // Responsive breakpoints
+        breakpoints: {
+            // When window width is >= 640px
+            640: {
+                slidesPerView: 1.5,
+                spaceBetween: 20
+            },
+            // When window width is >= 768px
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 30
+            },
+            // When window width is >= 1024px
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 30
+            }
+        },
+
         // If we need pagination
         pagination: {
             el: '.swiper-pagination',
@@ -48,11 +74,6 @@ document.addEventListener('DOMContentLoaded', function() {
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
-        },
-
-        // And if we need scrollbar
-        scrollbar: {
-            el: '.swiper-scrollbar',
         },
 
         // Auto play
@@ -66,21 +87,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Speed of transition
         speed: 800,
+    });
 
-        // Enable slides per view
-        slidesPerView: 1,
-
-        // Space between slides
-        spaceBetween: 0,
+    // Add click event to all slide images to open lightbox
+    // Use Swiper's slideChange event to get the real active index
+    swiper.on('slideChange', function() {
+        // Update the lightbox index when slides change
+        lightboxIndex = this.realIndex;
     });
 
     // Add click event to all slide images to open lightbox
     const slideElements = document.querySelectorAll('.swiper-slide');
     slideElements.forEach((slide, index) => {
         slide.addEventListener('click', function() {
-            // Calculate the actual index since Swiper duplicates slides for looping
-            const actualIndex = index % 6; // Since we have 6 actual slides
-            openLightbox(actualIndex);
+            // Calculate the real index based on the slide's position
+            const realIndex = index % 6; // Since we have 6 actual slides
+            openLightbox(realIndex);
         });
     });
 });
@@ -140,7 +162,7 @@ function changeLightboxImage(n) {
     captionText.innerHTML = lightboxImages[lightboxIndex].caption;
 
     // Update Swiper to show corresponding slide
-    swiper.slideTo(lightboxIndex, 800, false);
+    swiper.slideToLoop(lightboxIndex, 800, false);
 }
 
 // Close lightbox when clicking outside the image
