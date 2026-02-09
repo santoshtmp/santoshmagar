@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>With Love - Puja Rana Magar</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="A tribute to my beloved wife, Puja Rana Magar. Our journey of love and happiness.">
+    <meta name="keywords" content="Puja Rana Magar, love, marriage, wife, tribute">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="With Love - Puja Rana Magar">
+    <meta property="og:description"
+        content="A tribute to my beloved wife, Puja Rana Magar. Our journey of love and happiness.">
+    <meta property="og:image" content="/assets/images/santosh-000.png">
+    <meta property="og:url" content="https://santoshmagar.com.np/love/">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="With Love - Puja Rana Magar">
+    <meta name="twitter:description"
+        content="A tribute to my beloved wife, Puja Rana Magar. Our journey of love and happiness.">
+    <meta name="twitter:image" content="/assets/images/santosh-000.png">
+
+    <title>For My Beloved - Puja Rana Magar</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="/assets/images/favicon.ico" />
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Love Page CSS -->
+    <link rel="stylesheet" type="text/css" href="love/love.css">
+</head>
+
+<body>
+    <!-- Floating Hearts Background -->
+    <div class="heart-container" id="hearts-container"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">Puja Rana Magar</h1>
+            <p class="hero-subtitle">My Beloved Wife, My Everything</p>
+            <p style="font-size: 1.4rem; color: #555; margin-top: 20px;">
+                To the most beautiful soul I've ever known. Every moment with you is a blessing.
+            </p>
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="quote-section">
+        <div class="container">
+            <p class="quote">"Love is composed of a single soul inhabiting two bodies."</p>
+            <p style="font-size: 1.2rem; margin-top: 20px; color: #7f8c8d;">- Aristotle</p>
+        </div>
+    </section>
+
+    <!-- Photo Gallery Section -->
+    <section class="gallery-section">
+        <h2 class="section-title">Our Beautiful Moments</h2>
+        <div class="container">
+            <!-- Swiper Slider -->
+            <div class="swiper main-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" onclick="openLightbox(0)">
+                        <img src="/love/images/IMG_8176.jpg" alt="Our beautiful moment">
+                        <div class="slide-overlay">
+                            <p>Wedding Day</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" onclick="openLightbox(1)">
+                        <img src="/love/images/IMG_8212.jpg" alt="Our beautiful moment">
+                        <div class="slide-overlay">
+                            <p>Special Moment</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" onclick="openLightbox(2)">
+                        <img src="/love/images/IMG_8247.jpg" alt="Our beautiful moment">
+                        <div class="slide-overlay">
+                            <p>Our Journey</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" onclick="openLightbox(3)">
+                        <img src="/love/images/IMG_8251.jpg" alt="Our beautiful moment">
+                        <div class="slide-overlay">
+                            <p>Together Forever</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" onclick="openLightbox(4)">
+                        <img src="/love/images/IMG_8310.jpg" alt="Our beautiful moment">
+                        <div class="slide-overlay">
+                            <p>Love Story</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" onclick="openLightbox(5)">
+                        <img src="/love/images/IMG_2479.jpg" alt="Our beautiful moment">
+                        <div class="slide-overlay">
+                            <p>Happily Ever After</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Swiper Navigation -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+
+                <!-- Swiper Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+
+            <!-- Lightbox Modal -->
+            <div id="lightbox-modal" class="lightbox-modal">
+                <span class="close" onclick="closeLightbox()">&times;</span>
+                <div class="lightbox-content">
+                    <a class="prev-lightbox" onclick="changeLightboxImage(-1)">&#10094;</a>
+                    <img class="lightbox-image" id="lightbox-img" src="" alt="">
+                    <a class="next-lightbox" onclick="changeLightboxImage(1)">&#10095;</a>
+                </div>
+                <div class="lightbox-caption" id="lightbox-caption"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Memory Section -->
+    <section class="memory-section">
+        <div class="container">
+            <h2 class="section-title">Our Journey Together</h2>
+            <div class="memory-content">
+                <p>
+                    From the moment I met you, I knew that my life would never be the same.
+                    Your smile lights up my world, and your love fills my heart with joy beyond measure.
+                </p>
+                <p>
+                    Every day with you is a gift, and I cherish every moment we've shared together.
+                    Through all the ups and downs, your unwavering support and endless love have been my strength.
+                </p>
+                <p>
+                    Today and every day, I promise to love you, cherish you, and stand by your side
+                    through all of life's adventures. You are my best friend, my partner, and my greatest love.
+                </p>
+                <p class="signature">Forever Yours,<br>Santosh</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- YouTube Videos Section -->
+    <section class="youtube-section">
+        <div class="container">
+            <h2 class="section-title">Our Special Moments</h2>
+            <div class="video-grid">
+                <!-- Regular YouTube videos -->
+                <div class="video-item">
+                    <iframe width="360" height="200" src="https://www.youtube.com/embed/pi7Q6_tmG3k?enablejsapi=1"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="video-item">
+                    <iframe width="360" height="200" src="https://www.youtube.com/embed/teWOUCGDD3k?enablejsapi=1"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <!-- YouTube Shorts -->
+                <div class="video-item">
+                    <iframe width="360" height="200" src="https://www.youtube.com/embed/_hXmkQfcAfM?enablejsapi=1"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="video-item">
+                    <iframe width="360" height="200" src="https://www.youtube.com/embed/k3FBEKCy0r0?enablejsapi=1"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="video-item">
+                    <iframe width="360" height="200" src="https://www.youtube.com/embed/HR0uabWQCvw?enablejsapi=1"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-love">
+        <div class="container">
+            <p class="cc-footer">
+                Made with ❤️ for my beloved wife, Puja Rana Magar
+            </p>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- YouTube Player API -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+
+    <!-- Love Page JavaScript -->
+    <script src="love/love.js"></script>
+
+    <script>
+        // Function to handle video playback - only allow one video at a time
+        var players = {};
+        var currentPlayerId = null;
+
+        function onYouTubeIframeAPIReady() {
+            // Initialize players for each iframe
+            var iframes = document.querySelectorAll('.video-item iframe');
+            iframes.forEach(function (iframe, index) {
+                // Give each iframe a unique ID
+                var uniqueId = 'player-' + index;
+                iframe.id = uniqueId;
+
+                // Create a new player instance
+                players[uniqueId] = new YT.Player(iframe, {
+                    events: {
+                        'onStateChange': function (event) {
+                            if (event.data === YT.PlayerState.PLAYING) {
+                                // Store the currently playing player ID
+                                currentPlayerId = uniqueId;
+
+                                // Pause other videos when this one starts playing
+                                Object.keys(players).forEach(function (playerId) {
+                                    if (playerId !== uniqueId && players[playerId].getPlayerState() === YT.PlayerState.PLAYING) {
+                                        players[playerId].pauseVideo();
+                                    }
+                                });
+                            } else if (event.data === YT.PlayerState.PAUSED || event.data === YT.PlayerState.ENDED) {
+                                // Check if this player was the one that was playing
+                                if (currentPlayerId === uniqueId) {
+                                    currentPlayerId = null;
+                                }
+                            }
+                        }
+                    }
+                });
+            });
+        }
+    </script>
+</body>
+
+</html>
